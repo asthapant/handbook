@@ -3,5 +3,8 @@ Combinational Circuit consists of input variables(i/p), logic gates and output v
 Some common examples include:
 ## Adder
  - **Half-Adder**
-Half adder is a combinational arithmetic circuit designed to add two single bit numbers and produce a sum bit (S) and carry bit (C) as the output. Thus, 0 + 0 = 0 (S) and 0 (C), 0 + 1 = 1 (S) and 0 (C), 1 + 0 = 1 (S) and 0 (C), 1 + 1 = 0 (S) and 1 (C). 
-![](images/halfAdder.png)
+Half adder is a combinational arithmetic circuit designed to add two single bit numbers and produce a sum bit (S) and carry bit (C) as the output. Thus, 0 + 0 = 0 (S) and 0 (C), 0 + 1 = 1 (S) and 0 (C), 1 + 0 = 1 (S) and 0 (C), 1 + 1 = 0 (S) and 1 (C).  
+
+![halfAdder](https://user-images.githubusercontent.com/58358546/79316553-17046100-7f22-11ea-9708-38b22427255b.png)
+
+Following is the K-Map for Half Adder:
