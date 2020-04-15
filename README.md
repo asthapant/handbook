@@ -15,5 +15,6 @@ From this it is clear that a half adder circuit can be easily constructed using 
 - **Full-Adder**
 Full Adder is an arithmetic circuit which adds three inputs and produces two outputs. The first two inputs are(say) A and B and the third input is an input carry(C-In). First, addition of inputs A abd B is done followed by adding with input carry.
 
+![images](https://user-images.githubusercontent.com/58358546/79321039-5e8deb80-7f28-11ea-9c59-cae235360109.jpg)
 
 ![fulladder](https://user-images.githubusercontent.com/58358546/79320541-99dbea80-7f27-11ea-8a5f-8999b122127d.gif)
