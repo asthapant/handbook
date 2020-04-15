@@ -13,7 +13,7 @@ Following is the K-Map for Half Adder:
 ![KMAP](https://user-images.githubusercontent.com/58358546/79317814-c857c680-7f23-11ea-86d6-7271e9d3f0f1.jpg)
 From this it is clear that a half adder circuit can be easily constructed using one X-OR gate and one AND gate. If A and B are the input bits, then sum bit (S) is the X-OR of A and B and the carry bit (C) will be the AND of A and B.
 - **Full-Adder**
-Full Adder is an arithmetic circuit which adds three inputs and produces two outputs. The first two inputs are(say) A and B and the third input is an input carry(C-In). First, addition of inputs A abd B is done followed by adding with input carry.
+Full Adder is an arithmetic circuit which adds three inputs and produces two outputs. The first two inputs are(say) A and B and the third input is an input carry(C-In). First, addition of inputs A and B is done followed by adding with input carry.
 
 Truth Table for Full Adder-
 
@@ -22,3 +22,8 @@ Truth Table for Full Adder-
 Realisation of Circuit using AND and XOR gate-
 
 ![fulladder](https://user-images.githubusercontent.com/58358546/79320541-99dbea80-7f27-11ea-8a5f-8999b122127d.gif)
+
+For Sum, output is the XOR of A,B and C-In, For C-Out, output is the combined OR of AND of A-B, AND of B-CIN and AND of Cin-A. A Full Adder can be constructed using two Half Adders and an OR gate.
+- **Binary-Adder**
+A Binary Adder is a digital circuit capable of finding the arithmetic sum of two binary numbers(B<sub>3</sub>B<sub>2</sub>B<sub>1</sub>B<sub>0</sub>) and (A<sub>3</sub>A<sub>2</sub>A<sub>1</sub>A<sub>0</sub>) that is greater than one bit(here,4) in length by operating on corresponding pairs of bits in parallel. It consists of full adders connected in a chain where the output carry from each full adder is connected to the carry input of the next higher order full adder and so on. For a four bit number, four full adders are needed to give an output of Sum(S<sub>3</sub>S<sub>2</sub>S<sub>1</sub>S<sub>0</sub>)and Carry-out(C<sub>4</sub>)
+
