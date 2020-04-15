@@ -19,6 +19,8 @@ Truth Table for Full Adder-
 
 ![Full-Adder-truth-table](https://user-images.githubusercontent.com/58358546/79321172-9432d480-7f28-11ea-89b9-7d0e319e3df5.png)
 
+Here, the LSB is A<sub>0</sub> and B'<sub>0</sub> and MSB is  A<sub>3</sub> and B'<sub>3</sub>.
+
 Realisation of Circuit using AND and XOR gate-
 
 ![fulladder](https://user-images.githubusercontent.com/58358546/79320541-99dbea80-7f27-11ea-8a5f-8999b122127d.gif)
@@ -33,4 +35,10 @@ One limitation of a Binary adder is Gate Delay, due to the generation of four Ca
 - **Binary-Subtractor**
  Binary Subtractor is a logic circuit that subtracts two binary numbers from each other. It is similar to adding two binary numbers, with the number to be subtracted expressed in 2's complement form. Reminder!(2's complement involves inverting all the bits and adding 1 to the Least Significant Bit(LSB)).
  
+![4_bit_binary_subtractor](https://user-images.githubusercontent.com/58358546/79327186-a06f5f80-7f31-11ea-94de-a3e5c4a93cd0.jpg)
+
+Here, LSB is A<sub>0</sub> and B'<sub>0</sub> and MSB is  A<sub>3</sub> and B'<sub>3</sub>.
+-**Binary Adder/Subtractor**
+Binary Adder-Subtractor does both addition and subtraction of binary numbers in one circuit itself. The circuit consists of 4 full adders for operations on 4-bit numbers. There is a control signal(say K) that holds a binary value of either 0(adder) or 1(subtactor) which determines that the operation being carried out is addition or subtraction. One of the binary numbers(say B) is the input on the XOR gate along with the control signal.(Such that:1+B=B', 0+B=B) For Adder, the resultant expression becomes {A+B+Cin}as B+K=B since K is equal to 0. For Subtractor. the resultant expression is {A+(1's complement if B)+Cin} as B+K=B' since Kis equal to 1.
+
  
