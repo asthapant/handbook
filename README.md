@@ -108,7 +108,10 @@ Final Expression : (C+D'+B').(C'+D'+A).(A'+C+D).(A'+B+C')
 
 ## Combinational Circuits
 
-Combinational Circuit consists of input variables(i/p), logic gates and output variables(o/p). They are a type of time independent circuits whose output depends upon the present combination of input variables. In other terms, each output is a pure function of input variables. The logic basically performs Boolean Algebra on inputs, where each output is expressed in terms of a combination of (say) n input variables or a Boolean function. The major steps for designing a combinational circuit include making a truth table defining the relationship followed by simplifying the expression using K-Map and hence making a logic diagram using Gates.The circuit does not use any memory or storage.
+Combinational Circuit consists of input variables(i/p), logic gates and output variables(o/p). They are a type of **time independent circuits** whose output depends upon the present combination of input variables. In other terms, each output is a pure function of input variables.
+The logic basically performs Boolean Algebra on inputs, where each output is expressed in terms of a combination of (say) n input variables or a Boolean function. 
+
+The major steps for designing a combinational circuit include making a truth table defining the relationship followed by simplifying the expression using K-Map and hence making a logic diagram using Gates.The circuit does not use any memory or storage.
 
 Some common examples include:
 
@@ -146,7 +149,10 @@ For Sum, output is the XOR of A,B and C-In, For C-Out, output is the combined OR
 
 ## Binary-Adder
 
-A Binary Adder is a digital circuit capable of finding the arithmetic sum of two binary numbers(B<sub>4</sub>B<sub>3</sub>B<sub>2</sub>B<sub>1</sub>) and (A<sub>4</sub>A<sub>3</sub>A<sub>2</sub>A<sub>1</sub>) that is greater than one bit(here,4) in length by operating on corresponding pairs of bits in parallel. It consists of full adders connected in a chain where the output carry from each full adder is connected to the carry input of the next higher order full adder and so on. For a four bit number, four full adders are needed to give an output of Sum(S<sub>4</sub>S<sub>3</sub>S<sub>2</sub>S<sub>1</sub>)and Carry-out(C<sub>4</sub>)
+A Binary Adder is a digital circuit capable of finding the arithmetic sum of two binary numbers(B<sub>4</sub>B<sub>3</sub>B<sub>2</sub>B<sub>1</sub>) and (A<sub>4</sub>A<sub>3</sub>A<sub>2</sub>A<sub>1</sub>) that is greater than one bit(here,4) in length by operating on corresponding pairs of bits in parallel.
+
+It consists of **full adders connected in a chain** where the output carry from each full adder is connected to the carry input of the next higher order full adder and so on.
+For a four bit number, four full adders are needed to give an output of Sum(S<sub>4</sub>S<sub>3</sub>S<sub>2</sub>S<sub>1</sub>)and Carry-out(C<sub>4</sub>)
 
 ![binaryAdder](https://user-images.githubusercontent.com/58358546/79324616-7e73de00-7f2d-11ea-8537-8e02d8bd5216.gif)
 
@@ -165,7 +171,10 @@ One limitation of a Binary adder is Gate Delay, due to the generation of four Ca
 
 ## Binary Adder/Subtractor
 
-Binary Adder-Subtractor does both addition and subtraction of binary numbers in one circuit itself. The circuit consists of 4 full adders for operations on 4-bit numbers. There is a control signal(say K) that holds a binary value of either 0(adder) or 1(subtactor) which determines that the operation being carried out is addition or subtraction. One of the binary numbers(say B) is the input on the XOR gate along with the control signal.(Such that:1+B=B', 0+B=B) For Adder, the resultant expression becomes {A+B+Cin}as B+K=B since K is equal to 0. For Subtractor. the resultant expression is {A+(1's complement if B)+Cin} as B+K=B' since Kis equal to 1.
+Binary Adder-Subtractor does both addition and subtraction of binary numbers in one circuit itself. The circuit consists of 4 full adders for operations on 4-bit numbers. 
+There is a control signal(say K) that holds a binary value of either 0(adder) or 1(subtactor) which determines that the operation being carried out is addition or subtraction.
+
+One of the binary numbers(say B) is the input on the XOR gate along with the control signal.(Such that:1+B=B', 0+B=B) For Adder, the resultant expression becomes {A+B+Cin}as B+K=B since K is equal to 0. For Subtractor. the resultant expression is {A+(1's complement if B)+Cin} as B+K=B' since Kis equal to 1.
 
 ![addsub](https://user-images.githubusercontent.com/58358546/79328652-08bf4080-7f34-11ea-9e21-9277d1a89858.png)
 
