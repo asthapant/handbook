@@ -71,9 +71,17 @@ Moving to the circuit design, counters are groups of flip-flops and as we know, 
  - A counter following binary number sequence is called Binary Counter. We'll be using this term hereby.
  - An n bit binary counter consists of n flip-flops and can count in binary from 0 to (2<sup>n</sup> – 1).
  
-## 4-Bit Binary Ripple/ Asynchronous Counter
+## Binary Ripple/ Asynchronous Counters
+
 
 In an asynchronous counter we don’t use universal clock, only first flip flop is driven by main clock and the output of the first flip flop is the clock input of the second flip flop and so on. Since it is an UP Counter, it counts from a lower to higher value. 
+
+They are of following types:
+- 2-bit, 3-bit, 4-bit asynchronous UP counter
+- 2-bit, 3-bit, 4 bit asynchronous DOWN counter
+- 2-bit, 3-bit, 4 bit asynchronous UP/DOWN counter
+
+For simplicity and understanding, we will study **4-bit asynchronous UP counter** in detail:
 
 ### Design
 
@@ -129,6 +137,12 @@ For the truth-table, Q<sub>0</sub> is the LSB and Q<sub>3</sub> is the MSB. Thus
 |  13|  1|  1 |  0 |  1 |
 |  14|  1 | 1  |  1 |  0 |
 |  15|  1 |  1 |  1 |  1|
+
+## 4- bit asynchronous DOWN counter
+
+As a simple modification of the UP counter. 4 bit DOWN counter will count numbers from 15 to 0, downwards. The output of the first flip flop will change, when the negative falling edge of clock signal occurs. Here every clock pulse at the input will reduce the count of the individual flip flop. So the down counter counts from 15, 14, 13...0 i.e.(1111 to 0000).
+
+The block diagram of 4-bit Asynchronous binary down counter is similar to the block diagram of 4-bit Asynchronous binary up counter. But, the only difference is that instead of connecting the normal outputs of one stage flip-flop as clock signal for next stage flip-flop, connect the complemented outputs of one stage flip-flop as clock signal for next stage flip-flop. 
 
 
 ## BCD Ripple Counter/ Decade Counter
@@ -193,9 +207,44 @@ Similarly, following is the state diagram of a BCD Counter:
  </p>
 
 
+## Synchronous Counters
 
 
-## Synchronous Counter
+If the clock pulses are applied to all the flip-flops in a counter simultaneously, then such a counter is called as synchronous counter.
+The one advantage of synchronous counter over asynchronous counter is that it can operate on a higher frequency than asynchronous counter as it does not have delay because of same clock given to each flip flop.
+
+### Steps to design a Synchronous Counter
+
+
+| Q | Q* | J | K |
+|---|----|---|---|                              
+| 0 | 0  | 0 | - |                                      
+| 0 | 1  | 1 | - |
+| 1 | 0  | - | 1 |
+| 1 | 1  | - | 0 |   
+
+  
+|    |    |    |    |    |    |    |    |    |    |    |    |
+|----|----|----|----|----|----|----|----|----|----|----|----|
+| Q2 | Q1 | Q0 | Q2* | Q1* | Q0* | J<sub>2</sub> | K<sub><sub>2</sub> | J<sub>1</sub>| K<sub>1</sub> | J<sub>0</sub>| K<sub>0</sub> |
+| 0  | 0  | 0  | 0  | 0  | 1  | 0  | X  | 0  | X  | 1  | X  |
+| 0  | 0  | 1  | 0  | 1  | 0  | 0  | X  | 1  | X  | X  | 1  |
+| 0  | 1  | 0  | 0  | 1  | 1  | 0  | X  | X  | 0  | 1  | X  |
+| 0  | 1  | 1  | 1  | 0  | 0  | 1  | X  | X  | 1  | X  | 1  |
+| 1  | 0  | 0  | 1  | 0  | 1  | X  | 0  | 0  | X  | 1  | X  |
+| 1  | 0  | 1  | 1  | 1  | 0  | X  | 0  | 1  | X  | X  | 1  |
+| 1  | 1  | 0  | 1  | 1  | 1  | X  | 0  | X  | 0  | 1  | X  |
+| 1  | 1  | 1  | 0  | 0  | 0  | X  | 1  | X  | 1  | X  | 1  |
+
+
+
+
+
+
+
+
+
+
 
 
 
