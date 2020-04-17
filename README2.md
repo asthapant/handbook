@@ -126,7 +126,7 @@ The circuit is essentially, a ripple counter which counts up to 16. We desire ho
 Thus, the pulse after the counter is at count = 9, effectively results in the counter going to count = 0.
 
 <p align="center">
- <img src="">
+ <img src=" width="700" height="400">
  </p>
 
 |Clock Pulse   |  Q<sub>3</sub> | Q<sub>2</sub>  | Q<sub>1</sub>  | Q<sub>0</sub>  |
