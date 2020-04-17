@@ -8,7 +8,7 @@ A **Register** is a device which is used to store such information. It is a **gr
 There are two types of registers: **parallel** and **serial** registers. They differ in the manner in which the binary data is loaded and retrieved from them. For serial form, one bit is input at a time(SI) and so we even receive a serial output(SO). For parallel form, data is entered individually to all the F/Fs(PI) and received as parallel outputs(PO).
 
 <p align="center">
-<image src="https://user-images.githubusercontent.com/58358546/79540291-89517e80-80a5-11ea-9f46-1ea052887b2c.png">
+<image src="https://user-images.githubusercontent.com/58358546/79550289-c58cdb00-80b5-11ea-8fa0-9581135fc718.png" width="200" height ="400">
 </p>
 
 For a 4-bit register, we thus use 4 Flip-Flops. Since we just want data to be stored without toggling, we will use a D Flip-Flop. A clock is internally connected to all the four F/Fs to govern the operation. So, we are bound to follow the clock.
@@ -39,8 +39,9 @@ The shift register, which allows serial input (one bit after the other through a
 
 The logic circuit given below shows a serial-in serial-out shift register. The circuit consists of four D flip-flops which are connected in a serial manner. All these flip-flops are synchronous with each other since the same clock signal is applied to each flip flop.
 
+
 <p align="center">
-<img src="https://user-images.githubusercontent.com/58358546/79548757-907f8900-80b3-11ea-87aa-81e4e8b1f9c5.png">
+<img src="https://user-images.githubusercontent.com/58358546/79550304-c9b8f880-80b5-11ea-8305-ca28d29a777c.png" width="900" height="250">
 </p>
 
 
