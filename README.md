@@ -5,19 +5,23 @@ Digital electronics part of E club handbook
 The main use of K maps is to simplify or reduce our circuit or to reduce the POS or SOP expression that we have made using logic gates(the ones previously told) and with our input signals thus arriving at the most optimal logic design 
 
 Some of the two variable(input), three variable(input) and four variable(input) K-Maps are:
-![](images/images.png) 
+
+<img src="https://www.dyclassroom.com/image/topic/boolean-algebra/k-map/05.png" width="350">           <img src="https://i.ytimg.com/vi/XO2oHLgR2Dg/hqdefault.jpg" height ="300"> 
+
+<p align = "center">
+<img src="https://3.bp.blogspot.com/-JkmyKT3baJ4/ULRmQq4tT3I/AAAAAAAAAI0/CwqzOYSaQ8c/s1600/4+var.kmap1.jpg" height = "400">
+</p>
 
 Here note the order of variables-
 
-like for the first one the signal expression would be represented as f(B,A) means the one which is first comes down and the next one up.
+like for the first one the signal expression would be represented as f(A,B) means the one which is first comes down and the next one up.
 
-Similarly for the 3 variable Karnaugh map which is f(C,A,B), the first one C down and the next two A,B up.Do guess for the fouth one:)
+Similarly for the 3 variable Karnaugh map which is f(Z,X,Y), the first one Z down and the next two X,Y up.Do guess for the fouth one:)
 
 I'm pretty sure you are confused by the order of 0's & 1's written on the top of table and on the side of the table.For now, just learn them up, you will get to know the intuition behind it afterwards.
 
-The use of them is to fill the decimal numbers in the bottom right corner of each block of the table just like as shown:
+The use of them is to fill the decimal numbers in the bottom right corner of each block of the table just like as was shown:
 
-![](images/K5.jpg)
 
 ### Filling and Solving the K-Map
 
@@ -29,7 +33,9 @@ You can make groups in horizontal, vertical and in sideways (making groups of th
 
 like for the above example:
 
-![](images/K-Map-Karnaugh-Map.png)
+<p align="center">
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/K-Map-Karnaugh-Map.png">
+</p> 
 
 Here ,was only the possibility of pairs and no quads as there were no four 1's in line **horizontally**, **vertically** or as a **2x2 rubik's cube**.
 
@@ -51,7 +57,9 @@ Hence the reduced expression : A'.C + A.B
 
 F(P,Q,R,S)=∑(0,2,5,7,8,10,13,15)
 
-![](images/K-Map-Karnaugh-Map-2-1.png)
+<p align="center">
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/K-Map-Karnaugh-Map-2-1.png">
+</p> 
 
 Here the **sideways grouping** is applicable and hence a quad is formed
 
@@ -65,15 +73,13 @@ Final expression: Q'.S' + Q.S
 
 F(A,B,C,D):∑(0,1,2,4,5,6,8,9,10,12,13)
 
-![](images/K2.png)
+<p align="center">
+<img src="https://www.electricaltechnology.org/wp-content/uploads/2018/04/4-variable-k-map-Example.png">
+</p>
 
 Try to this on your own
 
 Final expression: A' + C'.B' + D'.B'
-
-**Tip** : Try to avoid this mistake anywhere as it simply makes the expression more lengthy 
-
-![](images/download.png)
 
 
 ## POS Expression
@@ -82,15 +88,21 @@ For the POS expression all the things are same as the SOP expression but instead
 
 ### 4 variable POS expression
 
-F(A,B,C,D)=π(0,1,2,3,4,6,8,10,11,12,14)
+F(A,B,C,D)=π(3,5,7,8,10,11,12,13)
 
-![](images/kq.jpg)
+<p align = "center">
+<img src = "https://media.geeksforgeeks.org/wp-content/uploads/K-Map-Karnaugh-Map-3.png", width = "500" height = "400">
+</p> 
 
-octat : D (A,B,C changes)
-quad : C' + B
-quad : A + B
+green pair = C+D'+B'
 
-Final Expression : D.(C' + B').(A + B)
+red pair = C'+D'+A
+
+blue pair = A'+C+D
+
+brown pair = A'+B+C'
+
+Final Expression : (C+D'+B').(C'+D'+A).(A'+C+D).(A'+B+C')
 
 
 
@@ -157,7 +169,9 @@ The intuition behind it is that the inputs can be supposed to be diiferent input
 
 The truth table is as follows:
 
-![](https://www.electrical4u.com/images/february16/1460009218.PNG)  
+<p align ="center">
+<img src = "https://www.electrical4u.com/images/february16/1460009218.PNG">
+</p> 
 
 When enable pin is 0 the circuit is not started and when it is 1, the circuit works in the original way.
 
@@ -174,7 +188,9 @@ Only one input line should be high and corresponding to that a combination of ou
 
 for example an octal to binary encoder:  has eight input lines(Y0-Y7) and three output lines(A0-A2)
 
-![](https://www.tutorialspoint.com/digital_circuits/images/octal_to_binary_encoder_circuit_diagram.jpg)
+<p align = "center">
+<img src = "https://www.tutorialspoint.com/digital_circuits/images/octal_to_binary_encoder_circuit_diagram.jpg">
+</p>
 
 The truth table for it is as follows:
 
@@ -285,5 +301,5 @@ Now if we make S = 0 , R = 0 , both Q and Q' become 1.    **The same inconsisten
 The truth table of NAND Latch is:
 
 <p align ="center">
-<img src = "https://lh3.googleusercontent.com/proxy/09VA8fASn942Ge49Atrqlo_o-HZm7fTbRfP-xsFWBbq6b8Ff5Fv86gu98TneHxg_F6XJhkclRkyy">
+<img src = "https://www.electronicshub.org/wp-content/uploads/2013/12/4.jpg">
 </p>
