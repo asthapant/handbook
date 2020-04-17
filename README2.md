@@ -81,6 +81,11 @@ For a 4-Bit Binary Asynchronous Counter, we use 4 JK flip flops(can also use T f
 
 The output Q<sub>0</sub> of the first F/F is given as input clock to second F/F and output Q<sub>1</sub> of second is acting as clock for third F/F and so on.
 
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/58358546/79570442-14973800-80d7-11ea-9fe1-108c9cc7e939.png" height="230" width="800">
+ </p>
+
+
 
 However, for a slight change, it uses 4 bits to count decimal numbers from 0 to 9 (0000 to 1001) and then goes back to 0. The rest of the numbers (10 to 15 (1010 to 1111) are DON'T CARE (X) in K map, and do not appear in Counters. 
 
@@ -96,9 +101,24 @@ For output of the second F/F (Q<sub>0</sub>), Q<sub>0</sub> acts as a clock, and
 
 Following the process, we similarly draw diagrams for Q<sub>2</sub>and Q<sub>3</sub>.
 
+<p align="center">
+ <kbd>
+ <img src="https://user-images.githubusercontent.com/58358546/79570458-1b25af80-80d7-11ea-9f6f-0ebb26c5e380.png" height="380" width="800">
+ </kbd>
+ </p>
+
+
 
 
 For the truth-table, Q<sub>0</sub> is the LSB and Q<sub>3</sub> is the MSB. Thus, we notice the states of all four outputs for 16 states and plot the table:
+
+<p align="center">
+ <kbd>
+<img src="">
+ </kbd>
+ </p>
+
+
 
 
 
