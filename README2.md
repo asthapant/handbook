@@ -5,10 +5,13 @@ However, in order to store multiple bits of data, we need multiple flip flops.
 
 A **Register** is a device which is used to store such information. It is a **group of flip flops** connected in series and used to store multiple bits of data. The N-bit register consists of N number of Flip Flops and thus stores a N-bit number.
 
-There are two types of registers: **parallel** and **serial** registers. They differ in the manner in which the binary data is loaded and retrieved from them. For serial form, one bit is input at a time(SI) and so we even receive a serial output(SO). For parallel form, data is entered individually to all the F/Fs(PI) and received as parallel outputs(PO).
+There are two types of registers: **parallel** and **serial** registers. They differ in the manner in which the binary data is loaded and retrieved from them. 
+
+- For serial form, one bit is input at a time(SI) and so we even receive a serial output(SO). 
+- For parallel form, data is entered individually to all the F/Fs(PI) and received as parallel outputs(PO).
 
 <p align="center">
-<image src="https://user-images.githubusercontent.com/58358546/79550289-c58cdb00-80b5-11ea-8fa0-9581135fc718.png" width="200" height ="400">
+<image src="https://user-images.githubusercontent.com/58358546/79612383-3665de80-811a-11ea-9726-116f8fafc49e.png" width="550" height ="400">
 </p>
 
 For a 4-bit register, we thus use 4 Flip-Flops. Since we just want data to be stored without toggling, we will use a D Flip-Flop. A clock is internally connected to all the four F/Fs to govern the operation. So, we are bound to follow the clock.
@@ -17,14 +20,14 @@ For a 4-bit register, we thus use 4 Flip-Flops. Since we just want data to be st
 
 Whatever input we give to the F/Fs gets changed after one time period of the clock. Here, for **negative trigerred** flip flops, value changes on reaching from one falling edge to another. Thus, for the next clock pulse, we will have different combination of bits stored.
 
-Thereby, we use an independently controlled **Load**.
+- Thereby, we use an independently controlled **Load**.
 
 When we want register inputs to remain unchanged (even with clock changes), we can use a load control input. The load input determines whether the next pulse will accept new information or leave the information in the register intact. 
 
 The Load input, when set at logic level 1 (high state), sets the four flip-flop data inputs to the register's four input bits. That is, we load the data into the register. 
 When Load is at logic level 0 (low state), the four flip-flops have their outputs fed into their inputs. That is, the value stored doesn't change.
 
-There is also an additional direct reset input named **CLEAR or RESET**. When CLEAR is 0 the flip flop is resetting,independent of clock and D values. It is useful because in digital systems when the power is turned on the state of flip-flops is unknown. Direct input CLEAR can bring all flip-flops to the known starting state prior to the clock operation.
+- There is also an additional direct reset input named **CLEAR or RESET**. When CLEAR is 0 the flip flop is resetting,independent of clock and D values. It is useful because in digital systems when the power is turned on the state of flip-flops is unknown. Direct input CLEAR can bring all flip-flops to the known starting state prior to the clock operation.
 
 There are two types of Registers based on application, namely:
  - **Shift Register**
@@ -43,9 +46,36 @@ For a Right shift register, the serial input determines what goes into the leftm
 
 The logic circuit given below shows a serial-in serial-out shift register. The circuit consists of four D flip-flops which are connected in a serial manner. All these flip-flops are synchronous with each other since the same clock signal is applied to each flip flop.
 
+So, it look like this:
+
+
 <p align="center">
-<img src="https://user-images.githubusercontent.com/58358546/79611910-3fa27b80-8119-11ea-90c4-d96d5dd06b32.png" width="750" height="250" >
+<img src="https://user-images.githubusercontent.com/58358546/79611910-3fa27b80-8119-11ea-90c4-d96d5dd06b32.png" width="750" height="250">
 </p>
+
+
+### Working
+
+How does a shift register work? The working is simple.
+- Lets assume that all the flip-flops (1 to 4) have just been RESET (CLEAR input) and that all the outputs Q<sub>0</sub> to Q<sub>3</sub> are at logic level 0. The input we want to store is 1111.
+- If a logic 1 is connected to the serial input pin of first flip flop, then on the first clock pulse the output of first D flip flop,
+and therefore the resulting Q<sub>3</sub> will be set HIGH to logic 1, with all the other outputs still remaining LOW at logic 0.
+- Now, we give the next input 1. With D2 connected to Q3, D2 becomes 1 and so does Q2. So, now the resulting ouputs become 1100.
+- In the similar way Q1 also becomes 1 and so does Q0 in the last step.
+- Hence our stored data becomes 1111.
+
+So, we draw the Table for the given data:
+
+| Clock Pulse | Q<sub>3</sub>| Q<sub>2</sub>| Q<sub>1</sub>|  Q<sub>0</sub>|
+|-------------|----|----|----|----|
+| Initial     | 0  | 0  | 0  | 0  |
+| First       | 1  | 0  | 0  | 0  |
+| Second      | 1  | 1  | 0  | 0  |
+| Third       | 1  | 1  | 1  | 0  |
+| Fourth      | 1  | 1  | 1  | 1  |
+
+Timing Diagram:
+
 
 
 ## Counters
