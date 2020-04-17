@@ -41,7 +41,7 @@ The logic circuit given below shows a serial-in serial-out shift register. The c
 
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/58358546/79550304-c9b8f880-80b5-11ea-8305-ca28d29a777c.png" width="900" height="250">
+<img src="https://user-images.githubusercontent.com/58358546/79550304-c9b8f880-80b5-11ea-8305-ca28d29a777c.png" width="800" height="230">
 </p>
 
 
