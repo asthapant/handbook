@@ -12,12 +12,12 @@ There are two types of registers: **parallel** and **serial** registers. They di
 </p>
 
 For a 4-bit register, we thus use 4 Flip-Flops. Since we just want data to be stored without toggling, we will use a D Flip-Flop. A clock is internally connected to all the four F/Fs to govern the operation. So, we are bound to follow the clock.
-**But this poses a problem!**
+
+#### But this poses a problem!
 
 Whatever input we give to the F/Fs gets changed after one time period of the clock. Here, for **negative trigerred** flip flops, value changes on reaching from one falling edge to another. Thus, for the next clock pulse, we will have different combination of bits stored.
 
 Thereby, we use an independently controlled **Load**.
-If all bits of the register are loaded simultaneously with a common clock pulse, we say that the loading is done in parallel.
 
 When we want register inputs to remain unchanged (even with clock changes), we can use a load control input. The load input determines whether the next pulse will accept new information or leave the information in the register intact. 
 
