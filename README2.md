@@ -155,7 +155,7 @@ The circuit is essentially, a ripple counter which counts up to 16. We desire ho
 - With counter REST count = 0000 the counter is ready to stage counter cycle.
 - The counter then starts counting from 0 till it reaches 1001(decimal 9).
 - The next count pulse advance the count to 10 count = 1010. Now, we have to reset our flip flops! 
-- For this, we use 2 asynchronous inputs: **Preset (PST)** and **Clear (CLR)**. As we know, when CLR=0; Output=0(**RESET**) and when PST=0; Output=1(**SET**). But here we need RESET action, hence Preset is connected to Logic 1, so it has no effect on flip flops.
+- For this, we use 2 asynchronous inputs: **Preset (PR)** and **Clear (CLR)**. As we know, when CLR=0; Output=0(**RESET**) and when PST=0; Output=1(**SET**). But here we need RESET action, hence Preset is connected to Logic 1, so it has no effect on flip flops.
 - To make CLR=0, a logic NAND gate decodes the count of 10 providing a level change at that time which then resets all counter stages.
 
 Thus, the pulse after the counter is at count = 9, effectively results in the counter going to count = 0.
@@ -267,7 +267,7 @@ So, our circuit excitation table looks like this:
  
  <p align="center">
  <img src="https://user-images.githubusercontent.com/58358546/79607318-a4a5a380-8110-11ea-9657-f1980bc69642.png"
-      height="400" width="650">
+      height="400" width="670">
  </p>
  
  
@@ -284,6 +284,20 @@ So, our circuit excitation table looks like this:
  <p align="center">
  <img src="https://user-images.githubusercontent.com/58358546/79606909-f13caf00-810f-11ea-9133-1842015c8d8c.jpg">
  </p>
+ 
+ 
+## Modulo-m counters
+
+- 2-bit up/down ripple counter is MOD-4 or modulus 4 counter.
+- 3-bit up/down ripple counter is MOD-8 or modulus 8 counter.
+MOD number is equal to the number of bits,(2<sub>n</sub>).
+
+Now, an important point to be discussed here is, making a counter count to a particular value. A Modulo-m counter can also be
+made a Modulo-p counter, with p < m. Example: A Modulo-8 counter can be made to count only from 0 to 5, and thus, it becomesa Modulo-6 counter.
+
+This is done using PRESET and CLR input, and with the use of NAND gate. We've already discussed something similar in a decade counter.
+
+
  
  
  
