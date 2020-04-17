@@ -126,9 +126,14 @@ The circuit is essentially, a ripple counter which counts up to 16. We desire ho
 Thus, the pulse after the counter is at count = 9, effectively results in the counter going to count = 0.
 
 <p align="center">
- <img src=" width="700" height="400">
+ <img src="https://user-images.githubusercontent.com/58358546/79584399-f556d580-80eb-11ea-835b-9f70f0b9e6cc.jpg"
+ width="730" height="400">
  </p>
-
+ 
+ 
+ Truth Table of a BCD ripple Counter is:
+ 
+ 
 |Clock Pulse   |  Q<sub>3</sub> | Q<sub>2</sub>  | Q<sub>1</sub>  | Q<sub>0</sub>  |
 |---|---|---|---|---|
 |  0|  0|  0 | 0  | 0  |
