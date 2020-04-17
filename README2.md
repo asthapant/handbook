@@ -77,9 +77,9 @@ Moving to the circuit design, counters are groups of flip-flops and as we know, 
 In an asynchronous counter we don’t use universal clock, only first flip flop is driven by main clock and the output of the first flip flop is the clock input of the second flip flop and so on. Since it is an UP Counter, it counts from a lower to higher value. 
 
 They are of following types:
-- 2-bit, 3-bit, 4-bit asynchronous UP counter
-- 2-bit, 3-bit, 4 bit asynchronous DOWN counter
-- 2-bit, 3-bit, 4 bit asynchronous UP/DOWN counter
+- N-bit asynchronous UP counter
+- N-bit asynchronous DOWN counter
+- N-bit asynchronous UP/DOWN counter
 
 For simplicity and understanding, we will study **4-bit asynchronous UP counter** in detail:
 
@@ -196,14 +196,14 @@ Following is the state diagram of a simple 3-bit Up counter:
 
 <p align="center">
  <img src="https://user-images.githubusercontent.com/58358546/79588578-c3487200-80f1-11ea-9299-0d9613e98b9e.png"
-width="530" height="330">
+width="500" height="300">
  </p>
 
-Similarly, following is the state diagram of a BCD Counter:
+Similarly, following is the state diagram of a BCD up Counter:
 
 <p align="center">
  <img src="https://user-images.githubusercontent.com/58358546/79588588-c5aacc00-80f1-11ea-9929-1563dbd60a34.png"
- width="530" height="330">
+ width="500" height="300">
  </p>
 
 
@@ -215,14 +215,26 @@ The one advantage of synchronous counter over asynchronous counter is that it ca
 
 ### Steps to design a Synchronous Counter
 
+- Decide the number of Flip Flops.
+- Draw the Excitation Table of the flip flop.
+- Draw the state diagram of the counter and circuit excitation table.
+- Obtain simplified equation using K-Map.
+- Draw the logic diagram.
+
+Here, lets complete these steps and design a 3-bit synchronous counter using JK flip flop.
+
+### Excitation table for JK flip flop
 
 | Q | Q* | J | K |
 |---|----|---|---|                              
-| 0 | 0  | 0 | - |                                      
-| 0 | 1  | 1 | - |
-| 1 | 0  | - | 1 |
-| 1 | 1  | - | 0 |   
+| 0 | 0  | 0 |  X |                                      
+| 0 | 1  | 1 |  X |
+| 1 | 0  |  X | 1 |
+| 1 | 1  |  X | 0 |   
 
+We've already seen the state dagram for 3-bit counter, so that step can be skipped.
+
+### Circuit Excitation table
   
 |    |    |    |    |    |    |    |    |    |    |    |    |
 |----|----|----|----|----|----|----|----|----|----|----|----|
@@ -235,6 +247,10 @@ The one advantage of synchronous counter over asynchronous counter is that it ca
 | 1  | 0  | 1  | 1  | 1  | 0  | X  | 0  | 1  | X  | X  | 1  |
 | 1  | 1  | 0  | 1  | 1  | 1  | X  | 0  | X  | 0  | 1  | X  |
 | 1  | 1  | 1  | 0  | 0  | 0  | X  | 1  | X  | 1  | X  | 1  |
+ 
+ ### K Map
+ 
+ 
 
 
 
