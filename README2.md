@@ -55,7 +55,7 @@ Counter is apparently the widest application of flip-flops. As the name suggests
 
 ### Different types of Counters:
 
-**UP counters** count upwards or incrementally. It increases count for every rising/falling edge of clock depending upon positive/negative trigerring of the flip flops.
+**UP counters** count upwards or incrementally. It increases count for every rising/falling edge of clock depending upon positive/negative edge triggering of the flip flops.
 
 **Down counters** on the other hand, count downwards or in a decremental manner. 
 
@@ -93,7 +93,7 @@ A 4-bit asynchronous counter thus represents **10 states**.
 
 **How does it work ?**
 
-Since this is a 4-bit counter, we need to consider 16 stated of the clock. The flip flops are negative edge trigerred, so we consider falling edges for the change in the timing diagram. 
+Since this is a 4-bit counter, we need to consider 16 stated of the clock. The flip flops are negative edge triggered, so we consider falling edges for the change in the timing diagram. 
 
 Starting from output of the first F/F (Q<sub>0</sub>), initially it is 0 and it remains 0 till the first falling edge, then it is complemented due to toggling and remains high till the next falling edge, then again low and so on.
 
@@ -102,21 +102,49 @@ For output of the second F/F (Q<sub>0</sub>), Q<sub>0</sub> acts as a clock, and
 Following the process, we similarly draw diagrams for Q<sub>2</sub>and Q<sub>3</sub>.
 
 <p align="center">
- <kbd>
+ <
  <img src="https://user-images.githubusercontent.com/58358546/79570458-1b25af80-80d7-11ea-9f6f-0ebb26c5e380.png" height="380" width="800">
- </kbd>
+ 
  </p>
-
-
 
 
 For the truth-table, Q<sub>0</sub> is the LSB and Q<sub>3</sub> is the MSB. Thus, we notice the states of all four outputs for 16 states and plot the table:
 
+## BCD Ripple Counter/ Decade Counter
+
+A Decade Counter is a serial digital counter which goes through 10 unique combinations of outputs and then resets as the clock proceeds. 
+It uses 4 bits to count in **binary coded decimal** numbers from 0 to 9 (0000 to 1001) and then goes back to 0. The rest of the numbers from 10 to 15 (1010 to 1111) are DON'T CARE (X) in K map, and do not appear in BCD Counters.
+
+The circuit is essentially, a ripple counter which counts up to 16. We desire however, a circuit operation in which the count advance from 0 to 9 and then reset to 0 for a new cycle. This reset is a accomplished at the desired count as follows:
+
+- With counter REST count = 0000 the counter is ready to stage counter cycle.
+- The counter then starts counting from 0 till it reaches 1001(decimal 9).
+- The next count pulse advance the count to 10 count = 1010. Now, we have to reset our flip flops! 
+- For this, we use 2 asynchronous inputs: **Preset (PST)** and **Clear (CLR)**. As we know, when CLR=0; Output=0(**RESET**) and when PST=0; Output=1(**SET**). But here we need RESET action, hence Preset is connected to Logic 1, so it has no effect on flip flops.
+- To make CLR=0, a logic NAND gate decodes the count of 10 providing a level change at that time which then resets all counter stages.
+
+Thus, the pulse after the counter is at count = 9, effectively results in the counter going to count = 0.
+
 <p align="center">
- <kbd>
-<img src="">
- </kbd>
+ <img src="">
  </p>
+
+|Clock Pulse   |  Q<sub>3</sub> | Q<sub>2</sub>  | Q<sub>1</sub>  | Q<sub>0</sub>  |
+|---|---|---|---|---|
+|  0|  0|  0 | 0  | 0  |
+|  1|  0|  0 | 0  |  1 |
+|  2|  0|  0 | 1  |  0 |
+|  3|  0|  0 |  1 |  1 |
+|  4|  0 | 1  |  0 |  0 |
+|  5|  0 |  1 |  0 |  1 |
+|  6|  0 |  1 |  1 |  0 |
+|  7|  0 |  1 |  1 |  1 |
+|  8|  1 |  0 |  0 |  0 |
+|  9|  1 |  0 |  0 |  1 |
+| 10|  0 |  0 |  0 |  0 |
+
+
+
 
 
 
