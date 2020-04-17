@@ -148,7 +148,7 @@ Thus, the pulse after the counter is at count = 9, effectively results in the co
 
 <p align="center">
  <img src="https://user-images.githubusercontent.com/58358546/79584399-f556d580-80eb-11ea-835b-9f70f0b9e6cc.jpg"
- width="730" height="400">
+ width="630" height="360">
  </p>
  
  
@@ -181,17 +181,16 @@ The states are namely the counts of our counter and depicting them pictorially i
 Following is the state diagram of a simple 3-bit Up counter:
 
 <p align="center">
- <img src=""
- width="730" height="400">
+ <img src="https://user-images.githubusercontent.com/58358546/79588578-c3487200-80f1-11ea-9299-0d9613e98b9e.png"
+width="530" height="330">
  </p>
 
 Similarly, following is the state diagram of a BCD Counter:
 
 <p align="center">
- <img src=""
- width="730" height="400">
+ <img src="https://user-images.githubusercontent.com/58358546/79588588-c5aacc00-80f1-11ea-9929-1563dbd60a34.png"
+ width="530" height="330">
  </p>
-
 
 
 
