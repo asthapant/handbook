@@ -33,15 +33,15 @@ There are two types of Registers namely:
 For simplicity, we will elaborate only Shift Registers. 
 
 
-##Shift Register
+## Shift Register
 
 The shift register, which allows serial input (one bit after the other through a single data line) and produces a serial output is known as Serial-In Serial-Out shift register. Since there is only one output, the data leaves the shift register one bit at a time in a serial pattern, thus the name Serial-In Serial-Out Shift Register.
 
 The logic circuit given below shows a serial-in serial-out shift register. The circuit consists of four D flip-flops which are connected in a serial manner. All these flip-flops are synchronous with each other since the same clock signal is applied to each flip flop.
 
 <p align="center">
- <img src="
-  </p>
+<img src="https://user-images.githubusercontent.com/58358546/79548757-907f8900-80b3-11ea-87aa-81e4e8b1f9c5.png">
+</p>
 
 
 
