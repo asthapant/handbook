@@ -44,7 +44,7 @@ For a Right shift register, the serial input determines what goes into the leftm
 The logic circuit given below shows a serial-in serial-out shift register. The circuit consists of four D flip-flops which are connected in a serial manner. All these flip-flops are synchronous with each other since the same clock signal is applied to each flip flop.
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/58358546/79550304-c9b8f880-80b5-11ea-8305-ca28d29a777c.png" width="800" height="230" >
+<img src="https://user-images.githubusercontent.com/58358546/79611910-3fa27b80-8119-11ea-90c4-d96d5dd06b32.png" width="750" height="250" >
 </p>
 
 
@@ -111,7 +111,7 @@ Following the process, we similarly draw diagrams for Q<sub>2</sub>and Q<sub>3</
 
 <p align="center">
  <
- <img src="https://user-images.githubusercontent.com/58358546/79570458-1b25af80-80d7-11ea-9f6f-0ebb26c5e380.png" height="380" width="800">
+ <img src="https://user-images.githubusercontent.com/58358546/79570458-1b25af80-80d7-11ea-9f6f-0ebb26c5e380.png" height="380" width="600">
  
  </p>
 
