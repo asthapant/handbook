@@ -225,6 +225,8 @@ Here, lets complete these steps and design a 3-bit synchronous counter using JK 
 
 ### Excitation table for JK flip flop
 
+We very well know how to make an excitation table for a JK flip flop.
+
 | Q | Q* | J | K |
 |---|----|---|---|                              
 | 0 | 0  | 0 |  X |                                      
@@ -235,10 +237,19 @@ Here, lets complete these steps and design a 3-bit synchronous counter using JK 
 We've already seen the state dagram for 3-bit counter, so that step can be skipped.
 
 ### Circuit Excitation table
-  
+
+For 3-bit, there are 8 states(0 to 7). The present states will be indicated by Q<sub>2</sub>, Q<sub>1</sub>. Q<sub>0</sub> while the next state will be shown as Q<sub>2</sub>*, Q<sub>1</sub>*, Q<sub>0</sub>*.
+
+It is very simple to write the next state of a counter using state diagram. The present state starts at 000 and the next state ends at 000.
+
+To find the inputs of JK flip flop, we refer to the excitation table, notice the present and the next state and thus the generated input.
+
+So, our circuit excitation table looks like this:
+
+
 |    |    |    |    |    |    |    |    |    |    |    |    |
 |----|----|----|----|----|----|----|----|----|----|----|----|
-| Q2 | Q1 | Q0 | Q2* | Q1* | Q0* | J<sub>2</sub> | K<sub><sub>2</sub> | J<sub>1</sub>| K<sub>1</sub> | J<sub>0</sub>| K<sub>0</sub> |
+| Q<sub>2</sub> | Q<sub>1</sub> | Q<sub>0</sub> | Q<sub>2</sub>* | Q<sub>1</sub>* | Q<sub>0</sub>* | J<sub>2</sub> | K<sub><sub>2</sub> | J<sub>1</sub>| K<sub>1</sub> | J<sub>0</sub>| K<sub>0</sub> |
 | 0  | 0  | 0  | 0  | 0  | 1  | 0  | X  | 0  | X  | 1  | X  |
 | 0  | 0  | 1  | 0  | 1  | 0  | 0  | X  | 1  | X  | X  | 1  |
 | 0  | 1  | 0  | 0  | 1  | 1  | 0  | X  | X  | 0  | 1  | X  |
@@ -248,17 +259,34 @@ We've already seen the state dagram for 3-bit counter, so that step can be skipp
 | 1  | 1  | 0  | 1  | 1  | 1  | X  | 0  | X  | 0  | 1  | X  |
 | 1  | 1  | 1  | 0  | 0  | 0  | X  | 1  | X  | 1  | X  | 1  |
  
+ 
  ### K Map
  
+ Now, we need to make K map for the same. For total 6 JK inputs, we need to make 6 eight cells K maps, one for each input. We know that the DON'T CARE value(X) can be grouped with 1, so making possible groups and writing the expressions that follow, we obtain:
+ 
+ 
  <p align="center">
- <img src="">
+ <img src="https://user-images.githubusercontent.com/58358546/79607318-a4a5a380-8110-11ea-9657-f1980bc69642.png"
+      height="400" width="650">
  </p>
+ 
  
  ### Logic Diagram
  
+ Having made the Kmap, we can easily design the logic diagram now.
+  - J<sub>0</sub> and K<sub>0</sub> are 1, so we connect them to logic value 1.
+  - J<sub>1</sub> and K<sub>1</sub> are equal to Q<sub>0</sub>, so output of first flip flop is input to second.
+  - J<sub>2</sub> and K<sub>2</sub> are aquired through the AND of Q<sub>0</sub> and Q<sub>1</sub>.
+  
+  **Thus, our logic diagram is ready !**
+  
+  
  <p align="center">
  <img src="https://user-images.githubusercontent.com/58358546/79606909-f13caf00-810f-11ea-9133-1842015c8d8c.jpg">
  </p>
+ 
+ 
+ 
 
  
  
