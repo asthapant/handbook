@@ -250,6 +250,17 @@ We've already seen the state dagram for 3-bit counter, so that step can be skipp
  
  ### K Map
  
+ <p align="center">
+ <img src="">
+ </p>
+ 
+ ### Logic Diagram
+ 
+ <p align="center">
+ <img src="https://user-images.githubusercontent.com/58358546/79606909-f13caf00-810f-11ea-9133-1842015c8d8c.jpg">
+ </p>
+
+ 
  
 
 
