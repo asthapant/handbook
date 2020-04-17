@@ -74,8 +74,11 @@ So, we draw the Table for the given data:
 | Third       | 1  | 1  | 1  | 0  |
 | Fourth      | 1  | 1  | 1  | 1  |
 
-Timing Diagram:
+Timing Diagram
 
+<p align="center">
+<image src="" width="550" height ="400">
+</p>
 
 
 ## Counters
