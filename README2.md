@@ -110,6 +110,27 @@ Following the process, we similarly draw diagrams for Q<sub>2</sub>and Q<sub>3</
 
 For the truth-table, Q<sub>0</sub> is the LSB and Q<sub>3</sub> is the MSB. Thus, we notice the states of all four outputs for 16 states and plot the table:
 
+
+|Clock Pulse   |  Q<sub>3</sub> | Q<sub>2</sub>  | Q<sub>1</sub>  | Q<sub>0</sub>  |
+|---|---|---|---|---|
+|  0|  0|  0 | 0  | 0  |
+|  1|  0|  0 | 0  |  1 |
+|  2|  0|  0 | 1  |  0 |
+|  3|  0|  0 |  1 |  1 |
+|  4|  0 | 1  |  0 |  0 |
+|  5|  0 |  1 |  0 |  1 |
+|  6|  0 |  1 |  1 |  0 |
+|  7|  0 |  1 |  1 |  1 |
+|  8|  1 |  0 |  0 |  0 |
+|  9|  1 |  0 |  0 |  1 |
+| 10|  1 |  0 |  1 |  0 |
+|  11|  1|  0 | 1  |  1 |
+|  12|  1|  1 | 0  |  0 |
+|  13|  1|  1 |  0 |  1 |
+|  14|  1 | 1  |  1 |  0 |
+|  15|  1 |  1 |  1 |  1|
+
+
 ## BCD Ripple Counter/ Decade Counter
 
 A Decade Counter is a serial digital counter which goes through 10 unique combinations of outputs and then resets as the clock proceeds. 
@@ -147,6 +168,37 @@ Thus, the pulse after the counter is at count = 9, effectively results in the co
 |  8|  1 |  0 |  0 |  0 |
 |  9|  1 |  0 |  0 |  1 |
 | 10|  0 |  0 |  0 |  0 |
+
+
+## State Diagram of a Counter
+
+### For a 3-bit Up Counter
+
+A 3-bit flip flop starts from 000(decimal 0) to its maximum count (2<sup>3</sup>-1) which is equal to 111(decimal 7). 
+
+The states are namely the counts of our counter and depicting them pictorially is a State diagram. We know that a counter changes states with every passing clock pulse, this change is indicated by arrows.
+
+Following is the state diagram of a simple 3-bit Up counter:
+
+<p align="center">
+ <img src=""
+ width="730" height="400">
+ </p>
+
+Similarly, following is the state diagram of a BCD Counter:
+
+<p align="center">
+ <img src=""
+ width="730" height="400">
+ </p>
+
+
+
+
+
+## Synchronous Counter
+
+
 
 
 
