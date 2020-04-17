@@ -116,6 +116,7 @@ The major steps for designing a combinational circuit include making a truth tab
 Some common examples include:
 
 # Adder and Subtactor
+
 ## Half-Adder
 
  Half adder is a combinational arithmetic circuit which simply adds two single bit numbers and produces a sum bit (S) and carry bit (C) as the output. That is, 0 + 0 = 0 (S) and 0 (C), 0 + 1 = 1 (S) and 0 (C), 1 + 0 = 1 (S) and 0 (C), 1 + 1 = 0 (S) and 1 (C). 
@@ -127,6 +128,7 @@ Below is the truth table, schematic representation and realization of a half add
 Following is the K-Map for Half Adder:
 
 ![KMAP](https://user-images.githubusercontent.com/58358546/79317814-c857c680-7f23-11ea-86d6-7271e9d3f0f1.jpg)
+
 From this it is clear that a half adder circuit can be easily constructed using one X-OR gate and one AND gate. If A and B are the input bits, then sum bit (S) is the X-OR of A and B and the carry bit (C) will be the AND of A and B.
 
 
