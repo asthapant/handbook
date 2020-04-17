@@ -26,7 +26,7 @@ When Load is at logic level 0 (low state), the four flip-flops have their output
 
 There is also an additional direct reset input named **CLEAR or RESET**. When CLEAR is 0 the flip flop is resetting,independent of clock and D values. It is useful because in digital systems when the power is turned on the state of flip-flops is unknown. Direct input CLEAR can bring all flip-flops to the known starting state prior to the clock operation.
 
-There are two types of Registers namely:
+There are two types of Registers based on application, namely:
  - **Shift Register**
  - **Storage Register**
  
@@ -35,14 +35,84 @@ For simplicity, we will elaborate only Shift Registers.
 
 ## Shift Register
 
-The shift register, which allows serial input (one bit after the other through a single data line) and produces a serial output is known as Serial-In Serial-Out shift register. Since there is only one output, the data leaves the shift register one bit at a time in a serial pattern, thus the name Serial-In Serial-Out Shift Register.
+A Shift register shifts its binary information in one or other direction. For example: by connecting the output of each D flip-flop to the input of another D flip flop in its right, each clock pulse shifts the content of the register, one bit position to the right.
+
+The shift register, which allows serial input (one bit after the other through a single data line) and produces a serial output is known as **Serial-In Serial-Out (SISO)**.
+
+For a Right shift register, the serial input determines what goes into the leftmost flip flop during the shift. The serial output is taken from the output of the rightmost flip flop.
 
 The logic circuit given below shows a serial-in serial-out shift register. The circuit consists of four D flip-flops which are connected in a serial manner. All these flip-flops are synchronous with each other since the same clock signal is applied to each flip flop.
 
-
 <p align="center">
-<img src="https://user-images.githubusercontent.com/58358546/79550304-c9b8f880-80b5-11ea-8305-ca28d29a777c.png" width="800" height="230">
+<img src="https://user-images.githubusercontent.com/58358546/79550304-c9b8f880-80b5-11ea-8305-ca28d29a777c.png" width="800" height="230" >
 </p>
+
+
+## Counters
+
+
+Counter is apparently the widest application of flip-flops. As the name suggests, they are used in digital electronics for counting purpose, that is, they can count specific event happening in the circuit, often in relationship to a clock signal. In layman terms, **counter counts the pulses**.
+
+### Different types of Counters:
+
+**UP counters** count upwards or incrementally. It increases count for every rising/falling edge of clock depending upon positive/negative trigerring of the flip flops.
+
+**Down counters** on the other hand, count downwards or in a decremental manner. 
+
+Now an interesting point to be noted is that not only counting, a counter can follow a certain sequence based on our design, like any random sequence 0,1,3,2... !
+
+Moving to the circuit design, counters are groups of flip-flops and as we know, flip-flops have a clock input, so depending on the type of clock input, counters are classified as:
+
+ - **Asynchronous or ripple counters**
+ - **Synchronous counters**
+ 
+ Before moving forward, there are two major points to be considered:
+ 
+ - A counter following binary number sequence is called Binary Counter. We'll be using this term hereby.
+ - An n bit binary counter consists of n flip-flops and can count in binary from 0 to (2<sup>n</sup> – 1).
+ 
+## 4-Bit Binary Ripple/ Asynchronous Counter
+
+In an asynchronous counter we don’t use universal clock, only first flip flop is driven by main clock and the output of the first flip flop is the clock input of the second flip flop and so on. Since it is an UP Counter, it counts from a lower to higher value. 
+
+### Design
+
+For a 4-Bit Binary Asynchronous Counter, we use 4 JK flip flops(can also use T flip flops as when J=K=1), and it can count from 0 to (2<sup>4</sup>-1), 0 to 15. 
+
+The output Q<sub>0</sub> of the first F/F is given as input clock to second F/F and output Q<sub>1</sub> of second is acting as clock for third F/F and so on.
+
+
+However, for a slight change, it uses 4 bits to count decimal numbers from 0 to 9 (0000 to 1001) and then goes back to 0. The rest of the numbers (10 to 15 (1010 to 1111) are DON'T CARE (X) in K map, and do not appear in Counters. 
+
+A 4-bit asynchronous counter thus represents **10 states**.
+
+**How does it work ?**
+
+Since this is a 4-bit counter, we need to consider 16 stated of the clock. The flip flops are negative edge trigerred, so we consider falling edges for the change in the timing diagram. 
+
+Starting from output of the first F/F (Q<sub>0</sub>), initially it is 0 and it remains 0 till the first falling edge, then it is complemented due to toggling and remains high till the next falling edge, then again low and so on.
+
+For output of the second F/F (Q<sub>0</sub>), Q<sub>0</sub> acts as a clock, and so we chnage state from low to high noticing the falling edge of Q<sub>0</sub>.
+
+Following the process, we similarly draw diagrams for Q<sub>2</sub>and Q<sub>3</sub>.
+
+
+
+For the truth-table, Q<sub>0</sub> is the LSB and Q<sub>3</sub> is the MSB. Thus, we notice the states of all four outputs for 16 states and plot the table:
+
+
+
+
+  
+
+
+ 
+
+
+
+
+
+
 
 
 
