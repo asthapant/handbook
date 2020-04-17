@@ -77,7 +77,7 @@ So, we draw the Table for the given data:
 Timing Diagram
 
 <p align="center">
-<image src="" width="550" height ="400">
+<image src="https://user-images.githubusercontent.com/58358546/79615120-9e6af380-811f-11ea-97dc-bcb72c5bcd70.jpg" width="500" height ="400">
 </p>
 
 
