@@ -302,8 +302,11 @@ The truth table of NOR Latch is:
 
 2. **NAND Latch**
 
+Circuit Diagram:
+
+
 <p align ="center">
-<img src = "https://cdn.sparkfun.com/assets/learn_tutorials/2/1/6/34-sr-latch-nand.png">
+<img src = "https://cdn.sparkfun.com/assets/learn_tutorials/2/1/6/34-sr-latch-nand.png" height="200" width="300">
 </p>
 
 * Two cross - coupled NAND gates
@@ -433,7 +436,7 @@ Now when it is again given as feedback, this would result 1 from NAND1 and 0 fro
 If J=K=1, and if clk=1 for a long period of time, then Q output will toggle as long as CLK is high, which makes the output of the flip-flop unstable or uncertain. This problem is called race around condition in J-K flip-flop.
 
 <p align="center">
-<img src = "https://3.bp.blogspot.com/-0hCoTTkoe58/UvOL-5QLo_I/AAAAAAAAANE/M1o4vVKoHhE/s1600/untitled.png" height="200">
+<img src = "https://3.bp.blogspot.com/-0hCoTTkoe58/UvOL-5QLo_I/AAAAAAAAANE/M1o4vVKoHhE/s1600/untitled.png" height="200" width="400">
 </p>
 
 This problem (Race Around Condition) can be avoided by ensuring that the clock input is at logic “1” only for a very short time. This introduced the concept of **Master Slave JK flip flop**.
@@ -449,7 +452,7 @@ The two blocks refer to the actual structure of the J K filp flop. In the master
 The problem of race around arises when clk=J=K=1 , so let's discuss that case.First see this:
 
 <p align="center">
-<img src ="https://media.geeksforgeeks.org/wp-content/uploads/flipflop-diag-1.jpg">
+<img src ="https://media.geeksforgeeks.org/wp-content/uploads/flipflop-diag-1.jpg" height="400" width="550">
 </p>  
 
 When the clock starts , master FF functions and the slave FF acts as a memory state as the clock signal is zero due to NOT gate. Now when J=1 and K=1 and on the rising edge of the clock , the Q signal becomes high of master FF and it would remain high till the second rising edge. 
