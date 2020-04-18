@@ -149,7 +149,7 @@ We can easily make the circuit using one XOR gate and one AND gate.
 So, here it is:
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/58358546/79631287-def55c00-8175-11ea-9d79-3e788d6a6522.png" height="400" width="400">
+<img src="https://user-images.githubusercontent.com/58358546/79631287-def55c00-8175-11ea-9d79-3e788d6a6522.png" height="350" width="350">
  </p>
  
  
@@ -164,7 +164,7 @@ Truth Table for Full Adder-
 Realisation of Circuit using AND and XOR gate-
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/58358546/79631288-e288e300-8175-11ea-8f95-ce52de591e3c.png">
+<img src="https://user-images.githubusercontent.com/58358546/79631288-e288e300-8175-11ea-8f95-ce52de591e3c.png" height="400" width="600">
  </p>
 
 For Sum, output is the XOR of A,B and C-In, For C-Out, output is the combined OR of AND of A-B, AND of B-CIN and AND of Cin-A. A Full Adder can be constructed using two Half Adders and an OR gate.
@@ -178,7 +178,10 @@ A Binary Adder is a digital circuit capable of finding the arithmetic sum of two
 It consists of **full adders connected in a chain** where the output carry from each full adder is connected to the carry input of the next higher order full adder and so on.
 For a four bit number, four full adders are needed to give an output of Sum(S<sub>4</sub>S<sub>3</sub>S<sub>2</sub>S<sub>1</sub>)and Carry-out(C<sub>4</sub>)
 
-![binaryAdder](https://user-images.githubusercontent.com/58358546/79324616-7e73de00-7f2d-11ea-8537-8e02d8bd5216.gif)
+<p align="center">
+<img src="https://user-images.githubusercontent.com/58358546/79631432-03056d00-8177-11ea-98b0-a6af3000abd2.jpg">
+</p>
+
 
 One limitation of a Binary adder is Gate Delay, due to the generation of four Carry-outs and Sums. Thus all outputs will be valid only after four Gate Delays, also known as Carry Propogation problem.
 
@@ -188,7 +191,9 @@ One limitation of a Binary adder is Gate Delay, due to the generation of four Ca
 
  Binary Subtractor is a logic circuit that subtracts two binary numbers from each other. It is similar to adding two binary numbers, with the number to be subtracted expressed in 2's complement form. Reminder!(2's complement involves inverting all the bits and adding 1 to the Least Significant Bit(LSB)).
  
-![4_bit_binary_subtractor](https://user-images.githubusercontent.com/58358546/79327186-a06f5f80-7f31-11ea-94de-a3e5c4a93cd0.jpg)
+ <p align="center">
+<img src="https://user-images.githubusercontent.com/58358546/79327186-a06f5f80-7f31-11ea-94de-a3e5c4a93cd0.jpg">
+ </p>
 
 
 
@@ -201,7 +206,7 @@ There is a control signal(say K) that holds a binary value of either 0(adder) or
 One of the binary numbers(say B) is the input on the XOR gate along with the control signal.(Such that:1+B=B', 0+B=B) For Adder, the resultant expression becomes {A+B+Cin}as B+K=B since K is equal to 0. For Subtractor. the resultant expression is {A+(1's complement if B)+Cin} as B+K=B' since Kis equal to 1.
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/58358546/79631290-e74d9700-8175-11ea-8a5c-d50331032194.png">
+<img src="https://user-images.githubusercontent.com/58358546/79631290-e74d9700-8175-11ea-8a5c-d50331032194.png" height="300" width="600">
  </p>
 
 
