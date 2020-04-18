@@ -119,20 +119,40 @@ Some common examples include:
 
 ## Half-Adder
 
- Half adder is a combinational arithmetic circuit which simply adds two single bit numbers and produces a sum bit (S) and carry bit (C) as the output. That is, 0 + 0 = 0 (S) and 0 (C), 0 + 1 = 1 (S) and 0 (C), 1 + 0 = 1 (S) and 0 (C), 1 + 1 = 0 (S) and 1 (C). 
+ Half adder is a combinational arithmetic circuit which simply adds two single bit numbers and produces a sum bit (S) and carry bit (C) as the output. Is just a simple addition of binary numbers! 
  
-Below is the truth table, schematic representation and realization of a half adder-
-
-![halfAdder](https://user-images.githubusercontent.com/58358546/79316553-17046100-7f22-11ea-9708-38b22427255b.png)
-
-Following is the K-Map for Half Adder:
-
-![KMAP](https://user-images.githubusercontent.com/58358546/79317814-c857c680-7f23-11ea-86d6-7271e9d3f0f1.jpg)
-
-From this it is clear that a half adder circuit can be easily constructed using one X-OR gate and one AND gate. If A and B are the input bits, then sum bit (S) is the X-OR of A and B and the carry bit (C) will be the AND of A and B.
+ So, 0 + 0 = 0 (S) and 0 (C), 0 + 1 = 1 (S) and 0 (C), 1 + 0 = 1 (S) and 0 (C), 1 + 1 = 0 (S) and 1 (C). 
+ 
+We thus make the truth table, assuming A and B as inputs and S and C as outputs.
 
 
+| A | B | S | C |
+|---|---|---|---|
+| 0 | 0 | 0 | 0 |
+| 1 | 0 | 1 | 0 |
+| 0 | 1 | 1 | 0 |
+| 1 | 1 | 0 | 1 |
 
+Now moving to the realization of the circuit, we first make the KMap:
+
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/58358546/79317814-c857c680-7f23-11ea-86d6-7271e9d3f0f1.jpg">
+ </p>
+ 
+
+So we see the simplified expressions and conclude that: 
+- Sum bit (S) is the X-OR of A and B 
+- Carry bit (C) is the AND of A and B.
+We can easily make the circuit using one XOR gate and one AND gate. 
+
+So, here it is:
+
+<p align="center">
+<img src="">
+ </p>
+ 
+ 
 ## Full-Adder
 
 Full Adder is an arithmetic circuit which adds three inputs and produces two outputs. The first two inputs are(say) A and B and the third input is an input carry(C-In). First, addition of inputs A and B is done followed by adding with input carry.
@@ -143,7 +163,9 @@ Truth Table for Full Adder-
 
 Realisation of Circuit using AND and XOR gate-
 
-![fulladder](https://user-images.githubusercontent.com/58358546/79320541-99dbea80-7f27-11ea-8a5f-8999b122127d.gif)
+<p align="center">
+<img src="">
+ </p>
 
 For Sum, output is the XOR of A,B and C-In, For C-Out, output is the combined OR of AND of A-B, AND of B-CIN and AND of Cin-A. A Full Adder can be constructed using two Half Adders and an OR gate.
 
@@ -178,7 +200,9 @@ There is a control signal(say K) that holds a binary value of either 0(adder) or
 
 One of the binary numbers(say B) is the input on the XOR gate along with the control signal.(Such that:1+B=B', 0+B=B) For Adder, the resultant expression becomes {A+B+Cin}as B+K=B since K is equal to 0. For Subtractor. the resultant expression is {A+(1's complement if B)+Cin} as B+K=B' since Kis equal to 1.
 
-![addsub](https://user-images.githubusercontent.com/58358546/79328652-08bf4080-7f34-11ea-9e21-9277d1a89858.png)
+<p align="center">
+<img src="">
+ </p>
 
 
 
