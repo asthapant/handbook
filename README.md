@@ -34,7 +34,7 @@ You can make groups in horizontal, vertical and in sideways (making groups of th
 like for the above example:
 
 <p align="center">
-<img src="https://media.geeksforgeeks.org/wp-content/uploads/K-Map-Karnaugh-Map.png">
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/K-Map-Karnaugh-Map.png" height="350" width="450">
 </p> 
 
 Here ,was only the possibility of pairs and no quads as there were no four 1's in line **horizontally**, **vertically** or as a **2x2 rubik's cube**.
@@ -58,7 +58,7 @@ Hence the reduced expression : A'.C + A.B
 F(P,Q,R,S)=∑(0,2,5,7,8,10,13,15)
 
 <p align="center">
-<img src="https://media.geeksforgeeks.org/wp-content/uploads/K-Map-Karnaugh-Map-2-1.png">
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/K-Map-Karnaugh-Map-2-1.png" height="350" width="450">
 </p> 
 
 Here the **sideways grouping** is applicable and hence a quad is formed
@@ -69,12 +69,12 @@ Red quad: Q.S
 
 Final expression: Q'.S' + Q.S
 
-##### one more example
+##### One more example
 
 F(A,B,C,D):∑(0,1,2,4,5,6,8,9,10,12,13)
 
 <p align="center">
-<img src="https://www.electricaltechnology.org/wp-content/uploads/2018/04/4-variable-k-map-Example.png">
+<img src="https://www.electricaltechnology.org/wp-content/uploads/2018/04/4-variable-k-map-Example.png" height="280" width="280">
 </p>
 
 Try to this on your own
@@ -88,10 +88,10 @@ For the POS expression all the things are same as the SOP expression but instead
 
 ### 4 variable POS expression
 
-F(A,B,C,D)=π(3,5,7,8,10,11,12,13)
+F(A,B,C,D) = π(3,5,7,8,10,11,12,13)
 
 <p align = "center">
-<img src = "https://media.geeksforgeeks.org/wp-content/uploads/K-Map-Karnaugh-Map-3.png", width = "500" height = "400">
+<img src = "https://media.geeksforgeeks.org/wp-content/uploads/K-Map-Karnaugh-Map-3.png", width = "300" height = "300">
 </p> 
 
 green pair = C+D'+B'
@@ -307,7 +307,9 @@ If a binary decoder receives n inputs it activates one and only one of its 2^n o
 
 A 3x8 binary decoder looks like this:
 
-<img src="https://www.elprocus.com/wp-content/uploads/3-to-8-Decoder-circuit.jpg" width="400" height="400"> **OR** <img src ="https://www.elprocus.com/wp-content/uploads/decoder-block-diagram.jpg" width = "400" height = "400">
+<p align="center">
+<img src="https://www.elprocus.com/wp-content/uploads/3-to-8-Decoder-circuit.jpg" width="300" height="300"> **OR** <img src ="https://www.elprocus.com/wp-content/uploads/decoder-block-diagram.jpg" width = "300" height = "300">
+ </p>
 
 The intuition behind it is that the inputs can be supposed to be diiferent input switches and the output lines could be different LED's, so when a combination of input is given through the switches, only the LED with that combination glows and all the other LED's do not glow.
 
@@ -333,7 +335,7 @@ Only one input line should be high and corresponding to that a combination of ou
 for example an octal to binary encoder:  has eight input lines(Y0-Y7) and three output lines(A0-A2)
 
 <p align = "center">
-<img src = "https://www.tutorialspoint.com/digital_circuits/images/octal_to_binary_encoder_circuit_diagram.jpg" height="400">
+<img src = "https://www.tutorialspoint.com/digital_circuits/images/octal_to_binary_encoder_circuit_diagram.jpg" height="300" width="350">
 </p>
 
 The truth table for it is as follows:
@@ -352,7 +354,7 @@ Sequential circuits are circuits in which the present output depend on the prese
 Basically, there's a memory element which stores the output and provides that as a feedback or another set of input to its own circuit to generate a new output.The basic difference between the sequential and combinational circuits are these memory blocks.
 
 <p align ="center">
-<img src="https://www.tutorialspoint.com/digital_circuits/images/sequential_circuit.jpg"/>)
+<img src="https://www.tutorialspoint.com/digital_circuits/images/sequential_circuit.jpg" height="300" width="400">
 </p>  
 
 You can think of it as a counter which counts from 0 to 9 by adding 1 bit each time. So it adds 0+1=1, 1+1=2, 2+1=3...... and so it should know what the previous digit was or on what to add 1.Thus a memory element stores what the previous digit was.
@@ -524,9 +526,16 @@ There is also one excitation table in which we have the outputs(Q(n) & Q(n+1)) w
 
 Due to the shortcoming of the SR flip flop, JK flip flop in which for every set of input there is an output. It is completely similar to the SR flip flop just having an output value for the forbidden states also.
 
-<p align = "center">
-<img src = "https://media.geeksforgeeks.org/wp-content/cdn-uploads/gq/2017/01/JK_flip.png" width="500" height="500">
-</p>
+| J | K | Q | Q* |
+|---|---|---|----|
+| 0 | 0 | 0 |  0 |
+| 0 | 0 | 1 |  1 |
+| 0 | 1 | 0 |  0 |
+| 0 | 1 | 1 |  0 |
+| 1 | 0 | 0 |  1 |
+| 1 | 0 | 1 |  1 |
+| 1 | 1 | 0 |  1 |
+| 1 | 1 | 1 |  0 |
 
 The truth table shown above have just the order of inputs different. You can easily understand it by referring below.
 
@@ -582,11 +591,14 @@ That output is fed back to master FF and on the second rising edge(means slave F
 
 <p align="center">
 <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/gq/2017/01/D-logic-diag-300x123.png" height="200">
-</p>  
-
-<p align="center">
-<img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/gq/2017/01/D-flip-flop.png" width="200" height="200">
 </p>
+
+| Q | D | Q* |
+|---|---|----|
+| 0 | 0 | 0  |
+| 0 | 1 | 1  |
+| 1 | 0 | 0  |
+| 1 | 1 | 1  |
 
 
 ### T Flip Flop
@@ -595,10 +607,12 @@ That output is fed back to master FF and on the second rising edge(means slave F
 <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/gq/2017/01/T-logic-diag-300x143.png" height="200" width="300">
 </p>  
 
-<p align="center">
-<img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/gq/2017/01/T-flip-flop-300x127.png" height="200" width="300">
-</p>  
-
+| T | Q | Q* |
+|---|---|----|
+| 0 | 0 | 0  |
+| 0 | 1 | 1  |
+| 1 | 0 | 1  |
+| 1 | 1 | 0  |
 
 
 ## Registers
