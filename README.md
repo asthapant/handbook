@@ -315,11 +315,19 @@ The intuition behind it is that the inputs can be supposed to be diiferent input
 
 The truth table is as follows:
 
-<p align ="center">
-<img src = "https://www.electrical4u.com/images/february16/1460009218.PNG">
-</p> 
+| S0 | S1 | S2 | E | D0 | D1 | D2 | D3 | D4 | D5 | D6 | D7 |
+|----|----|----|---|----|----|----|----|----|----|----|----|
+| x  | x  | x  | 0 | 0  | 0  | 0  | 0  | 0  | 0  | 0  | 0  |
+| 0  | 0  | 0  | 1 | 0  | 0  | 0  | 0  | 0  | 0  | 0  | 1  |
+| 0  | 0  | 1  | 1 | 0  | 0  | 0  | 0  | 0  | 0  | 1  | 0  |
+| 0  | 1  | 0  | 1 | 0  | 0  | 0  | 0  | 0  | 1  | 0  | 0  |
+| 0  | 1  | 1  | 1 | 0  | 0  | 0  | 0  | 1  | 0  | 0  | 0  |
+| 1  | 0  | 0  | 1 | 0  | 0  | 0  | 1  | 0  | 0  | 0  | 0  |
+| 1  | 0  | 1  | 1 | 0  | 0  | 1  | 0  | 0  | 0  | 0  | 0  |
+| 1  | 1  | 0  | 1 | 0  | 1  | 0  | 0  | 0  | 0  | 0  | 0  |
+| 1  | 1  | 1  | 1 | 1  | 0  | 0  | 0  | 0  | 0  | 0  | 0  |
 
-When enable pin is 0 the circuit is not started and when it is 1, the circuit works in the original way.
+ When enable pin is 0 the circuit is not started and when it is 1, the circuit works in the original way.
 
 Similarly there are 2x4 and 4x16 decoders also.
 
@@ -340,7 +348,17 @@ for example an octal to binary encoder:  has eight input lines(Y0-Y7) and three 
 
 The truth table for it is as follows:
 
-![](https://circuitdigest.com/sites/default/files/inlineimages/u/8-to-3-Encoder-Tuth-Table.png)
+| Y7 | Y6 | Y5 | Y4 | Y3 | Y2 | Y1 | Y0 | A2 | A1 | A0 |
+|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+|  0 |  0 |  0 |  0 |  0 |  0 |  0 |  1 |  0 |  0 |  0 |
+|  0 |  0 |  0 |  0 |  0 |  0 |  1 |  0 |  0 |  0 |  1 |
+|  0 |  0 |  0 |  0 |  0 |  1 |  0 |  0 |  0 |  1 |  0 |
+|  0 |  0 |  0 |  0 |  1 |  0 |  0 |  0 |  0 |  1 |  1 |
+|  0 |  0 |  0 |  1 |  0 |  0 |  0 |  0 |  1 |  0 |  0 |
+|  0 |  0 |  1 |  0 |  0 |  0 |  0 |  0 |  1 |  0 |  1 |
+|  0 |  1 |  0 |  0 |  0 |  0 |  0 |  0 |  1 |  1 |  0 |
+|  1 |  0 |  0 |  0 |  0 |  0 |  0 |  0 |  1 |  1 |  1 |
+
 
 Since, A0 = Y1 + Y3 + Y5 + Y7    ,   A1 = Y2 + Y3 + Y6 + Y7   ,  A2 = Y4 + Y5 + Y6 + Y7
 
@@ -412,9 +430,13 @@ For NOR Latch, S= 1 & R = 1 condition is **Not Allowed**.
 
 The truth table of NOR Latch is:
 
-<p align ="center">
-<img src = "https://electronicspost.com/wp-content/uploads/2015/05/24.png">
-</p>
+| S | R | Q              | State     |
+|---|---|----------------|-----------|
+| 0 | 0 | Previous State | No Change |
+| 0 | 1 | 0              | Reset     |
+| 1 | 0 | 1              | Set       |
+| 1 | 1 | ?              | Forbidden |
+
 
 2. **NAND Latch**
 
@@ -449,9 +471,12 @@ Now if we make S = 0 , R = 0 , both Q and Q' become 1.    **The same inconsisten
 
 The truth table of NAND Latch is:
 
-<p align ="center">
-<img src = "https://www.electronicshub.org/wp-content/uploads/2013/12/4.jpg">
-</p>
+| S | R | Q              | State     |
+|---|---|----------------|-----------|
+| 1 | 1 | Previous State | No change |
+| 1 | 0 | 0              | Reset     |
+| 0 | 1 | 1              | Set       |
+| 0 | 0 | ?              | Forbidden |
 
 ## Flip Flops
 
