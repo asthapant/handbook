@@ -206,7 +206,7 @@ For a four bit number, four full adders are needed to give an output of Sum(S<su
 Figure shows the circuit diagram:
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/58358546/79324616-7e73de00-7f2d-11ea-8537-8e02d8bd5216.gif">
+<img src="">
 </p>
 
 One limitation of a Binary adder is Gate Delay, due to the generation of four Carry-outs and Sums. Thus all outputs will be valid only after four Gate Delays, also known as Carry Propogation problem.
@@ -288,7 +288,7 @@ Binary Subtractor is a logic circuit that subtracts two binary numbers from each
 Binary Adder-Subtractor does both addition and subtraction of binary numbers in one circuit itself. The circuit consists of 4 full adders for operations on 4-bit numbers. 
 There is a control signal(say K) that holds a binary value of either 0(adder) or 1(subtactor) which determines that the operation being carried out is addition or subtraction.
 
-One of the binary numbers(say B) is the input on the XOR gate along with the control signal.(Such that:1+B=B', 0+B=B) For Adder, the resultant expression becomes {A+B+Cin}as B+K=B since K is equal to 0. For Subtractor. the resultant expression is {A+(1's complement if B)+Cin} as B+K=B' since Kis equal to 1.
+One of the binary numbers(say B) is the input on the XOR gate along with the control signal.(Such that:1+B=B', 0+B=B) For Adder, the resultant expression becomes {A+B+Cin}as B+K=B since K is equal to 0. For Subtractor. the resultant expression is {A+(1's complement if B)+Cin} as B+K=B' since K is equal to 1.
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/58358546/79631290-e74d9700-8175-11ea-8a5c-d50331032194.png" height="300" width="600">
