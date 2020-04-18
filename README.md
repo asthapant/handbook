@@ -206,7 +206,7 @@ For a four bit number, four full adders are needed to give an output of Sum(S<su
 Figure shows the circuit diagram:
 
 <p align="center">
-<img src="">
+<img src="https://user-images.githubusercontent.com/58358546/79638013-f39b1980-81a0-11ea-8bdc-e050b547a7d7.jpg">
 </p>
 
 One limitation of a Binary adder is Gate Delay, due to the generation of four Carry-outs and Sums. Thus all outputs will be valid only after four Gate Delays, also known as Carry Propogation problem.
