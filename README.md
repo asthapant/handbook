@@ -237,7 +237,7 @@ Moving to the Kmap, it is fairly simple to make:
 Circuit Diagram:
 
 <p align="center">
-<img src="">
+<img src="https://user-images.githubusercontent.com/58358546/79633888-eec86c80-8184-11ea-9a56-73eb11dd8252.png" height="330" width="400">
 </p>
 
 
@@ -261,7 +261,7 @@ We thus make the truth table, after performing binary subtractions of three inpu
 Moving forward to making the Kmap and getting the simplified expressions:
 
 <p align="center">
-<img src="">
+<img src="https://user-images.githubusercontent.com/58358546/79633887-ec661280-8184-11ea-9737-e2e2d75c0d1b.jpg">
 </p>
 
 First expression can be more simplified and written as D = ( A xor B xor B-in ). 
@@ -271,7 +271,7 @@ Now the circuit diagram can be easily made by
 - Using NOT gate, followed by AND gate and finally an OR gate to obtain B-out.
 
 <p align="center">
-<img src="">
+<img src="https://user-images.githubusercontent.com/58358546/79633894-f38d2080-8184-11ea-9e2d-3bf420242601.png" height="350" width="450">
 </p>
  
 
