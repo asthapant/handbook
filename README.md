@@ -205,7 +205,9 @@ For a four bit number, four full adders are needed to give an output of Sum(S<su
 
 Figure shows the circuit diagram:
 
-![binaryAdder](https://user-images.githubusercontent.com/58358546/79324616-7e73de00-7f2d-11ea-8537-8e02d8bd5216.gif)
+<p align="center">
+<img src="https://user-images.githubusercontent.com/58358546/79324616-7e73de00-7f2d-11ea-8537-8e02d8bd5216.gif">
+</p>
 
 One limitation of a Binary adder is Gate Delay, due to the generation of four Carry-outs and Sums. Thus all outputs will be valid only after four Gate Delays, also known as Carry Propogation problem.
 
@@ -275,10 +277,10 @@ Now the circuit diagram can be easily made by
 ## Binary-Subtractor
 
 Binary Subtractor is a logic circuit that subtracts two binary numbers from each other. It is similar to adding two binary numbers, with the number to be subtracted expressed in 2's complement form. Reminder!(2's complement involves inverting all the bits and adding 1 to the Least Significant Bit(LSB)).
- 
-![4_bit_binary_subtractor](https://user-images.githubusercontent.com/58358546/79327186-a06f5f80-7f31-11ea-94de-a3e5c4a93cd0.jpg)
 
-
+ <p align="center">
+<img src="https://user-images.githubusercontent.com/58358546/79327186-a06f5f80-7f31-11ea-94de-a3e5c4a93cd0.jpg">
+ </p>
 
 
 ## Binary Adder/Subtractor
