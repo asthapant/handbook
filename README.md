@@ -176,7 +176,7 @@ We need to make the Kmap now for both Sum(S) and carry(C-in):
 
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/58358546/79633874-db1d0600-8184-11ea-8009-e67413d588dc.jpg">
+<img src="https://user-images.githubusercontent.com/58358546/79634239-d6f1e800-8186-11ea-82c4-7a55d96f4b1f.jpg">
  </p>
  
 We can very well notice that:
@@ -231,7 +231,7 @@ So, the truth table is:
 Moving to the Kmap, it is fairly simple to make:
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/58358546/79633877-df492380-8184-11ea-8660-8b8d39535480.jpg">
+<img src="https://user-images.githubusercontent.com/58358546/79634234-d1949d80-8186-11ea-96a4-91ed474f9f55.jpg">
 </p>
 
 Circuit Diagram:
@@ -261,7 +261,7 @@ We thus make the truth table, after performing binary subtractions of three inpu
 Moving forward to making the Kmap and getting the simplified expressions:
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/58358546/79633887-ec661280-8184-11ea-9737-e2e2d75c0d1b.jpg">
+<img src="https://user-images.githubusercontent.com/58358546/79634230-cf324380-8186-11ea-89cf-e3ffd8c6cc49.jpg">
 </p>
 
 First expression can be more simplified and written as D = ( A xor B xor B-in ). 
