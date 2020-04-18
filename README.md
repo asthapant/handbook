@@ -6,12 +6,10 @@ The main use of K maps is to simplify or reduce our circuit or to reduce the POS
 
 Some of the two variable(input), three variable(input) and four variable(input) K-Maps look like:
 
-<img src="https://www.dyclassroom.com/image/topic/boolean-algebra/k-map/05.png" width="200" height="200">      <img src="https://i.ytimg.com/vi/XO2oHLgR2Dg/hqdefault.jpg" height ="300" width="300"> 
-
-<p align = "center">
-<img src="https://3.bp.blogspot.com/-JkmyKT3baJ4/ULRmQq4tT3I/AAAAAAAAAI0/CwqzOYSaQ8c/s1600/4+var.kmap1.jpg" height = "300">
-</p>
-
+<p align="center">
+<img src="https://user-images.githubusercontent.com/58358546/79644871-530d1f80-81c9-11ea-8620-bf6c27fe4c90.png" height="300" width="700">
+ </p>
+ 
 Here note the order of variables-
 
 like for the first one the signal expression would be represented as f(A,B) means the one which is first comes down and the next one up.
