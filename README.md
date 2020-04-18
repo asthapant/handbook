@@ -149,7 +149,7 @@ We can easily make the circuit using one XOR gate and one AND gate.
 So, here it is:
 
 <p align="center">
-<img src="">
+<img src="https://user-images.githubusercontent.com/58358546/79631287-def55c00-8175-11ea-9d79-3e788d6a6522.png" height="300" width="300">
  </p>
  
  
@@ -185,7 +185,7 @@ We can very well notice that:
 Thus, a Full Adder can be constructed using three AND, one OR gate and one XOR gate.
 
 <p align="center">
-<img src="">
+<img src="https://user-images.githubusercontent.com/58358546/79631288-e288e300-8175-11ea-8f95-ce52de591e3c.png" height="350" width="450">
  </p>
  
 
@@ -291,7 +291,7 @@ There is a control signal(say K) that holds a binary value of either 0(adder) or
 One of the binary numbers(say B) is the input on the XOR gate along with the control signal.(Such that:1+B=B', 0+B=B) For Adder, the resultant expression becomes {A+B+Cin}as B+K=B since K is equal to 0. For Subtractor. the resultant expression is {A+(1's complement if B)+Cin} as B+K=B' since Kis equal to 1.
 
 <p align="center">
-<img src="">
+<img src="https://user-images.githubusercontent.com/58358546/79631290-e74d9700-8175-11ea-8a5c-d50331032194.png" height="300" width="600">
  </p>
 
 
