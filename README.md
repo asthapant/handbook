@@ -4,9 +4,9 @@ Digital electronics part of E club handbook
 # K-Map
 The main use of K maps is to simplify or reduce our circuit or to reduce the POS or SOP expression that we have made using logic gates(the ones previously told) and with our input signals thus arriving at the most optimal logic design 
 
-Some of the two variable(input), three variable(input) and four variable(input) K-Maps are:
+Some of the two variable(input), three variable(input) and four variable(input) K-Maps look like:
 
-<img src="https://www.dyclassroom.com/image/topic/boolean-algebra/k-map/05.png" width="350">           <img src="https://i.ytimg.com/vi/XO2oHLgR2Dg/hqdefault.jpg" height ="300"> 
+<img src="https://www.dyclassroom.com/image/topic/boolean-algebra/k-map/05.png" width="200" height="200">      <img src="https://i.ytimg.com/vi/XO2oHLgR2Dg/hqdefault.jpg" height ="300" width="300"> 
 
 <p align = "center">
 <img src="https://3.bp.blogspot.com/-JkmyKT3baJ4/ULRmQq4tT3I/AAAAAAAAAI0/CwqzOYSaQ8c/s1600/4+var.kmap1.jpg" height = "300">
