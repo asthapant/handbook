@@ -155,28 +155,55 @@ So, here it is:
  
 ## Full-Adder
 
-Full Adder is an arithmetic circuit which adds three inputs and produces two outputs. The first two inputs are(say) A and B and the third input is an input carry(C-In). First, addition of inputs A and B is done followed by adding with input carry.
+Full Adder is an arithmetic circuit which adds three inputs and produces two outputs. The first two inputs are(say) A and B and the third input is an input carry(C-in). First, addition of inputs A and B is done followed by adding with input carry.
+- For example: For inputs A, B ,C-in as 1,1,1; A+B gives Sum 0 and C-out 1. Then further addition with 1 gives final Sum 1 and carry(got initially) which was 1.
 
-Truth Table for Full Adder-
+So, we make the truth table for all possible cases:
 
-![Full-Adder-truth-table](https://user-images.githubusercontent.com/58358546/79321172-9432d480-7f28-11ea-89b9-7d0e319e3df5.png).
 
-Realisation of Circuit using AND and XOR gate-
+| A  | B  | C-in  | S  |  C-out |
+|---|---|---|---|---|
+| 0 | 0 | 0 | 0 | 0 |
+| 0 | 0 | 1 | 1 | 0 |
+| 0 | 1 | 0 | 1 | 0 |
+| 0 | 1 | 1 | 0 | 1 |
+| 1 | 0 | 0 | 1 | 0 |
+| 1 | 0 | 1 | 0 | 1 |
+| 1 | 1 | 0 | 0 | 1 |
+| 1 | 1 | 1 | 1 | 1 |
+
+We need to make the Kmap now for both Sum(S) and carry(C-in):
+
+
+<p align="center">
+<img src="">
+ </p>
+ 
+We can very well notice that:
+- For Sum, output is the XOR of A,B and C-In, 
+- For C-Out, output is the combined OR of AND of A-B, AND of B-CIN and AND of Cin-A. 
+Thus, a Full Adder can be constructed using three AND, one OR gate and one XOR gate.
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/58358546/79631288-e288e300-8175-11ea-8f95-ce52de591e3c.png" height="400" width="600">
  </p>
-
-For Sum, output is the XOR of A,B and C-In, For C-Out, output is the combined OR of AND of A-B, AND of B-CIN and AND of Cin-A. A Full Adder can be constructed using two Half Adders and an OR gate.
-
-
+ 
 
 ## Binary-Adder
 
-A Binary Adder is a digital circuit capable of finding the arithmetic sum of two binary numbers(B<sub>4</sub>B<sub>3</sub>B<sub>2</sub>B<sub>1</sub>) and (A<sub>4</sub>A<sub>3</sub>A<sub>2</sub>A<sub>1</sub>) that is greater than one bit(here,4) in length by operating on corresponding pairs of bits in parallel.
+A Binary Adder is a digital circuit which finds the the arithmetic sum of two binary numbers that is greater than one bit in length by operating on corresponding pairs of bits in parallel For example, sum of four bit numbers:(B<sub>3</sub>B<sub>2</sub>B<sub>1</sub>B<sub>0</sub>) and (A<sub>3</sub>A<sub>2</sub>A<sub>1</sub>A<sub>0</sub>) 
 
 It consists of **full adders connected in a chain** where the output carry from each full adder is connected to the carry input of the next higher order full adder and so on.
-For a four bit number, four full adders are needed to give an output of Sum(S<sub>4</sub>S<sub>3</sub>S<sub>2</sub>S<sub>1</sub>)and Carry-out(C<sub>4</sub>)
+For a four bit number, four full adders are needed to give an output of Sum(S<sub>3</sub>S<sub>2</sub>S<sub>1</sub>S<sub>0</sub>)and Carry-out(C<sub>4</sub>)
+
+### Working
+
+- The LSB of both the inputs(A<sub>0</sub> and B<sub>0</sub>) are given to the first full adder. The initial carry is taken as 0.
+- The full adder then adds the three inputs accordingly and generates a sum output S<sub>0</sub>, and a carry output C<sub>1</sub>.
+- This C<sub>1</sub> is now the carry input to the second full adder, with other inputs A<sub>1</sub> and B<sub>1</sub>.
+- So this addition continues till we finally obtain S<sub>3</sub> to make the sum output S<sub>3</sub>S<sub>2</sub>S<sub>1</sub>S<sub>0</sub> and carry-out(C<sub>4</sub>).
+
+Figure shows the circuit diagram:
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/58358546/79631432-03056d00-8177-11ea-98b0-a6af3000abd2.jpg">
@@ -186,10 +213,71 @@ For a four bit number, four full adders are needed to give an output of Sum(S<su
 One limitation of a Binary adder is Gate Delay, due to the generation of four Carry-outs and Sums. Thus all outputs will be valid only after four Gate Delays, also known as Carry Propogation problem.
 
 
+## Half-Subtractor
+
+Half-Subtractor is another combinational logic circuit designed to perform subtraction of two single bits numbers. It has two inputs ( say A and B) and produces two outputs (Difference and Borrow-output). Just a simple subtraction of binary numbers!
+
+So, 0 - 0 = 0 (D) and 0 (b), 0 - 1 = 1 (D) and 1 (b), 1 - 0 = 1 (D) and 0 (b), 1 - 1 = 0 (D) and 0 (b). 
+
+So, the truth table is:
+
+| A | B | D | b |
+|---|---|---|---|
+| 0 | 0 | 0 | 0 |
+| 0 | 1 | 1 | 1 |
+| 1 | 0 | 1 | 0 |
+| 1 | 1 | 0 | 0 |
+
+Moving to the Kmap, it is fairly simple to make:
+
+<p align="center">
+<img src="">
+</p>
+
+Circuit Diagram:
+
+<p align="center">
+<img src="">
+</p>
+
+
+## Full-Subtractor
+
+Full-Adder is designed to perform subtraction of three single bits. It is given three inputs(say A, B, B-in) and produces two outputs (D, B-out). Here, A and B are called **Minuend** and **Subtrahend** bits. And, Bin is Borrow-In and Bout is Borrow-Out.
+
+We thus make the truth table, after performing binary subtractions of three inputs:
+
+| A | B | B-in | D | B-out |
+|---|---|------|---|-------|
+| 0 | 0 |   0  | 0 | 0     |
+| 0 | 0 |   1  | 1 |   1   |
+| 0 | 1 |   0  | 1 | 1     |
+| 0 | 1 |   1  | 0 | 1     |
+| 1 | 0 |   0  | 1 |   0   |
+| 1 | 0 |   1  | 0 | 0     |
+| 1 | 1 |   0  | 0 |   0   |
+| 1 | 1 |   1  | 1 | 1     |
+
+Moving forward to making the Kmap and getting the simplified expressions:
+
+<p align="center">
+<img src="">
+</p>
+
+First expression can be more simplified and written as D = ( A xor B xor B-in ). 
+
+Now the circuit diagram can be easily made by
+- Using XOR gate for getting Difference(D).
+- Using NOT gate, followed by AND gate and finally an OR gate to obtain B-out.
+
+<p align="center">
+<img src="">
+</p>
+ 
 
 ## Binary-Subtractor
 
- Binary Subtractor is a logic circuit that subtracts two binary numbers from each other. It is similar to adding two binary numbers, with the number to be subtracted expressed in 2's complement form. Reminder!(2's complement involves inverting all the bits and adding 1 to the Least Significant Bit(LSB)).
+Binary Subtractor is a logic circuit that subtracts two binary numbers from each other. It is similar to adding two binary numbers, with the number to be subtracted expressed in 2's complement form. Reminder!(2's complement involves inverting all the bits and adding 1 to the Least Significant Bit(LSB)).
  
  <p align="center">
 <img src="https://user-images.githubusercontent.com/58358546/79327186-a06f5f80-7f31-11ea-94de-a3e5c4a93cd0.jpg">
