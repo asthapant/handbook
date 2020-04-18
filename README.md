@@ -176,7 +176,7 @@ We need to make the Kmap now for both Sum(S) and carry(C-in):
 
 
 <p align="center">
-<img src="">
+<img src="https://user-images.githubusercontent.com/58358546/79633874-db1d0600-8184-11ea-8009-e67413d588dc.jpg">
  </p>
  
 We can very well notice that:
@@ -231,7 +231,7 @@ So, the truth table is:
 Moving to the Kmap, it is fairly simple to make:
 
 <p align="center">
-<img src="">
+<img src="https://user-images.githubusercontent.com/58358546/79633877-df492380-8184-11ea-8660-8b8d39535480.jpg">
 </p>
 
 Circuit Diagram:
