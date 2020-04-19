@@ -576,7 +576,7 @@ Having understood the latches, flip flops are really easy to understand. Let's f
 ### SR Flip Flop
 
 <p align ="center">
-<img src = "https://www.gatevidyalay.com/wp-content/uploads/2018/06/Logic-Circuit-For-SR-Flip-Flop-Constructed-Using-NAND-Latch.png" height="400" width="400">
+<img src = "https://user-images.githubusercontent.com/58358546/79684045-0b7ba780-824c-11ea-9f47-774f843efcc9.png">
 </p>
 
 If the clock pulse is 0 above then the next part of the flip flop which is simply a NAND SR Latch corresponds to the memory state as both inputs would be 1 to the latch.
@@ -697,8 +697,8 @@ That output is fed back to master FF and on the second rising edge(means slave F
 ### D Flip Flop
 
 <p align="center">
-<img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/gq/2017/01/D-logic-diag-300x123.png" height="200" width="300">
-</p>
+<img src="https://user-images.githubusercontent.com/58358546/79684048-11718880-824c-11ea-8473-9c4c123ea5e1.png" height="200" width="300">
+ </p>
 
 | Q | D | Q* |
 |---|---|----|
@@ -711,7 +711,7 @@ That output is fed back to master FF and on the second rising edge(means slave F
 ### T Flip Flop
 
 <p align="center">
-<img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/gq/2017/01/T-logic-diag-300x143.png" height="200" width="300">
+<img src="https://user-images.githubusercontent.com/58358546/79684046-0cacd480-824c-11ea-80ac-a96323eda253.jpg" height="200" width="300">
 </p>  
 
 | T | Q | Q* |
