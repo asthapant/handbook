@@ -376,6 +376,36 @@ The circuit diagram can be easily made now:
 <p align="center">
  <img src="https://user-images.githubusercontent.com/58358546/79682981-63161500-8244-11ea-87dc-94f634f70108.jpg">
  </p>
+ 
+ 
+## Comparator
+ 
+A magnitude comparator is a combinational circuit that compares two digital or binary numbers in order to find out whether one binary number is equal, less than or greater than the other binary number. 
+
+We logically design a circuit for which we will have two inputs one for A and other for B and have three output terminals, one for A > B condition, one for A = B condition and one for A < B condition.
+
+Here for simplicity, we will elaborate a 1-bit comparator which compares two numbers of 1 bit each.
+
+Lets look at the truth table for a 1-bit comparator:
+
+| A | B | A<B | A=B | A>B |
+|---|---|-----|-----|-----|
+| 0 | 0 | 0   | 1   | 0   |
+| 0 | 1 | 1   | 0   | 0   |
+| 1 | 0 | 0   | 0   | 1   |
+| 1 | 1 | 0   | 1   | 0   |
+
+Moving to K-Map for obtaining simplified expressions:
+
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/58358546/79684606-73cc8800-8250-11ea-810f-343707e8b67a.png">
+ </p>
+ 
+ By using these Boolean expressions, we can implement a logic circuit for this comparator as given below:
+ 
+ <p align="center">
+ <img src="https://user-images.githubusercontent.com/58358546/79684609-7929d280-8250-11ea-8916-66a415c7ba8a.png">
+ </p>
 
 
 ## Decoder
