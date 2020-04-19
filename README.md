@@ -86,7 +86,7 @@ Similarly the green pair will be: A.B (the value of C changes and A:1, B:1).
 
 Hence the reduced expression : A'.C + A.B
 
-#### 4 variable karnaugh map
+#### 4 variable Karnaugh Map:
 
 F(P,Q,R,S)=∑(0,2,5,7,8,10,13,15)
 
@@ -102,7 +102,7 @@ Red quad: Q.S
 
 Final expression: Q'.S' + Q.S
 
-##### One more example
+##### One more example-
 
 F(A,B,C,D):∑(0,1,2,4,5,6,8,9,10,12,13)
 
@@ -119,7 +119,7 @@ Final expression: A' + C'.B' + D'.B'
 
 For the POS expression all the things are same as the SOP expression but instead of 1's, you have to make the groups of 0's and during wriing the expression make sure that every variable's value is 0 , instead of 1 and if not take the complement of that variable. 
 
-### 4 variable POS expression
+### 4 variable POS expression:
 
 F(A,B,C,D) = π(3,5,7,8,10,11,12,13)
 
