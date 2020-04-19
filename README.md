@@ -14,7 +14,7 @@
   - [Comparator](#comp)
   - [Decoder](#deco)
   - [Encoder](#enco)
--[Sequential Circuit](#seque) 
+- [Sequential Circuit](#seque) 
   - [SR Latch](#sr)
     - [NOR Latch](#nor)
     - [NAND Latch](#nand)
