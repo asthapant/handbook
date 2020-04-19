@@ -62,7 +62,7 @@ you could be given a circuit as F(A,B,C)=∑(1,3,6,7). So now in all those squar
 
 Now we need to make groups of all the 1's if it is a SOP expression and all the 0's if it is a POS expression, but in only groups of the powers of 2 i.e. in (1,2,4,8,16....) and try to make the largest group possible and they should be continuous.
 
-You can make groups in horizontal, vertical and in sideways (making groups of the **extreme left** and the **extreme right** **or** the **top** and the **bottom**)
+You can make groups in horizontal, vertical and in sideways (making groups of the **extreme left** and the **extreme right** **or** the **top** and the **bottom**).
 
 like for the above example:
 
@@ -70,7 +70,7 @@ like for the above example:
 <img src="https://media.geeksforgeeks.org/wp-content/uploads/K-Map-Karnaugh-Map.png" height="350" width="450">
 </p> 
 
-Here ,was only the possibility of pairs and no quads as there were no four 1's in line **horizontally**, **vertically** or as a **2x2 rubik's cube**.
+Here, was only the possibility of pairs and no quads as there were no four 1's in line **horizontally**, **vertically** or as a **2x2 rubik's cube**.
 
 Also keep in mind that if all the 1's of a pair or a quad or an octat is used in the foramtion of any other pair,quad, or octat, the former pair, quad or octat becomes **redundant** or **there's no use of it**.
 
@@ -80,9 +80,9 @@ Just like here the pair shown in blue becomes redundant as both of its 1's are u
 
 Now, look for if value of that variable is changing like from 1 to 0 or from 0 to 1. If it is happening , then that variable will not be taken into the expression. Only those variables will be taken whose value do not change **remains 0 or remains1**.In case of a pair ,one will be lost; for a quad, 2 will be lost ; for an octat,3 will be lost.
 
-For this one , the red pair:  A'.C (as the value of B changes and value of A remains 0, C remains 1).  Since it is a **SOP** expression the value of each variable must be 1 when writing the expression hence complement of A is taken and C as it is + the fact is **SOP** (hence sum of products)
+For this one , the red pair:  A'.C (as the value of B changes and value of A remains 0, C remains 1).  Since it is a **SOP** expression the value of each variable must be 1 when writing the expression hence complement of A is taken and C as it is + the fact is **SOP** (hence sum of products).
 
-Similarly the green pair will be: A.B (the value of C changes and A:1,B:1)
+Similarly the green pair will be: A.B (the value of C changes and A:1, B:1).
 
 Hence the reduced expression : A'.C + A.B
 
@@ -94,9 +94,9 @@ F(P,Q,R,S)=∑(0,2,5,7,8,10,13,15)
 <img src="https://media.geeksforgeeks.org/wp-content/uploads/K-Map-Karnaugh-Map-2-1.png" height="350" width="450">
 </p> 
 
-Here the **sideways grouping** is applicable and hence a quad is formed
+Here the **sideways grouping** is applicable and hence a quad is formed.
 
-Green quad: Q'.S'( as the value of P and R changes with respect to the four blocks and the value of Q and S is 0)
+Green quad: Q'.S'( as the value of P and R changes with respect to the four blocks and the value of Q and S is 0).
 
 Red quad: Q.S
 
@@ -110,7 +110,7 @@ F(A,B,C,D):∑(0,1,2,4,5,6,8,9,10,12,13)
 <img src="https://www.electricaltechnology.org/wp-content/uploads/2018/04/4-variable-k-map-Example.png" height="280" width="280">
 </p>
 
-Try to this on your own
+Try to this on your own.
 
 Final expression: A' + C'.B' + D'.B'
 
@@ -471,7 +471,7 @@ It is the Set Reset Latch and there are two forms of it using the NOR gate and t
 1. **NOR Latch**
 
 <p align ="center">
-<img src = "https://sub.allaboutcircuits.com/images/04173.png">
+<img src = "https://user-images.githubusercontent.com/58358546/79684243-63ff7480-824d-11ea-99d2-3384f818e2d4.jpg" height="200" width="300">
 </p>  
 
   Two cross coupled NOR gates
@@ -526,12 +526,13 @@ Circuit Diagram:
 
 
 <p align ="center">
-<img src = "https://cdn.sparkfun.com/assets/learn_tutorials/2/1/6/34-sr-latch-nand.png" height="200" width="300">
+<img src = "https://cdn.sparkfun.com/assets/learn_tutorials/2/1/6/34-sr-latch-nand.png" height="180" width="280">
 </p>
 
-* Two cross - coupled NAND gates
 
-* Note the difference with NOR
+* Two cross - coupled NAND gates.
+
+* Note the difference with NOR.
 
 Latch : Here, S drives the Q output and R drives the Q' output
 
@@ -549,7 +550,7 @@ If now R is reverted to 1 and S = 1 , there's no change in the outputs (**memory
 
 Now if we make S = 0 , R = 0 , both Q and Q' become 1.    **The same inconsistency as the NOR latch**.
 
-**Hence this combinaion is not allowed**
+**Hence this combination is not allowed**
 
 The truth table of NAND Latch is:
 
@@ -623,10 +624,10 @@ There is also one excitation table in which we have the outputs(Q(n) & Q(n+1)) w
 
 | Q(n) | Q(n+1) | S | R |
 |:----:|:------:|:-:|:-:|
-|   0  |    0   | 0 | x |
+|   0  |    0   | 0 | X |
 |   0  |    1   | 1 | 0 |
 |   1  |    0   | 0 | 1 |
-|   1  |    1   | x | 0 |             **x = don't care (can be 0 or 1)**
+|   1  |    1   | X | 0 |             **X = DONT'T CARE (can be 0 or 1)**
 
 
 ## J K Flip Flop:
@@ -679,7 +680,7 @@ This problem (Race Around Condition) can be avoided by ensuring that the clock i
 
 The two blocks refer to the actual structure of the J K filp flop. In the master-slave condition another JK flip flop is added and the ouput of the second flip flop is feedbacked as input to the first flip flop + the same clock is attached with a NOT gate.
 
-The problem of race around arises when clk=J=K=1 , so let's discuss that case.First see this:
+The problem of race around arises when CLK=J=K=1 , so let's discuss that case.First see this:
 
 <p align="center">
 <img src ="https://media.geeksforgeeks.org/wp-content/uploads/flipflop-diag-1.jpg" height="400" width="550">
