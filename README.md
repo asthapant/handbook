@@ -1,3 +1,9 @@
+## Content
+- [Introduction](#digitalsystems)
+- [K-Map](#kmap)
+
+<a name="digitalsystems"></a>
+  
 # Digital Systems
 
 Digital Systems are designed to store, process, and communicate information in digital form. They are found in a wide range of applications, including process control, communication systems, digital instruments, and consumer products.These systems store data in a discrete way.
@@ -35,6 +41,8 @@ sists of the following sixteen number of digits.
 
   The size of the hexadecimal is much shorter than the binary number which makes
   them easy to write and remember.
+  
+<a name="kmap"></a>
 
 # K-Map
 The main use of K maps is to simplify or reduce our circuit or to reduce the POS or SOP expression that we have made using logic gates(the ones previously told) and with our input signals thus arriving at the most optimal logic design 
