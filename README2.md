@@ -341,7 +341,7 @@ Let us first learn the multiplication of 2-bit binary numbers:
 Assuming A = A<sub>1</sub>A<sub>0</sub> and B = B<sub>1</sub>B<sub>0</sub> , the various bits of the final product term C can be written as:
 
 <p align="center">
- <img src="">
+ <img src="https://user-images.githubusercontent.com/58358546/79682979-5db8ca80-8244-11ea-9045-f189a11e1002.jpg">
  </p>
  
  
@@ -363,7 +363,7 @@ Thus, for the multiplication, AND gates are required to form the various product
 The circuit diagram can be easily made now:
 
 <p align="center">
- <img src="">
+ <img src="https://user-images.githubusercontent.com/58358546/79682981-63161500-8244-11ea-87dc-94f634f70108.jpg">
  </p>
 
 
