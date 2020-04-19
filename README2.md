@@ -331,6 +331,42 @@ made a Modulo-p counter, with p < m. Example: A Modulo-8 counter can be made to 
 This is done using PRESET and CLR input, and with the use of NAND gate. We've already discussed something similar in a decade counter.
 
 
+## Binary Multiplier
+
+
+A Binary multiplier is used for multiplying two binary numbers by also using full adders and half adders.
+
+Let us first learn the multiplication of 2-bit binary numbers:
+
+Assuming A = A<sub>1</sub>A<sub>0</sub> and B = B<sub>1</sub>B<sub>0</sub> , the various bits of the final product term C can be written as:
+
+<p align="center">
+ <img src="">
+ </p>
+ 
+ 
+- C(0) = A<sub>0</sub>B<sub>0</sub>
+- C(1) = A<sub>1</sub>B<sub>0</sub> + B<sub>1</sub>A<sub>0</sub>
+- C(2) = A<sub>1</sub>B<sub>1</sub> + c<sub>1</sub> where c<sub>1</sub> is the carry generated during the addition for the C(1) term.
+- C(3) = c<sub>2</sub> where c<sub>2</sub> is the carry generated during the addition for the C(2) term.
+
+Moving ot the cicuit diagram:
+
+- The multiplication of two bits such as A<sub>0</sub> and B<sub>0</sub> produces a 1 if both bits are 1; otherwise, it produces 0. This is identical to an AND operation and can be implemented with an AND gate.
+- Thus the first partial products A<sub>0</sub>B<sub>0</sub> and A<sub>0</sub>B<sub>1</sub> are formed by means of two AND gates.
+- The second partial product is formed by multiplying A<sub>1</sub> by B<sub>1</sub> and B<sub>0</sub> and is shifted one position to the left.
+- The above two partial products are added with two half-adder(HA) circuits. Usually there are more bits in the partial products and it will be necessary to use full-adders to produce the sum.
+- Note that the least significant bit of the product does not have to go through an adder since it is formed by the output of the first AND gate.
+
+Thus, for the multiplication, AND gates are required to form the various product terms like A<sub>0</sub>B<sub>0</sub> etc. and then half adders are required to calculate the sums involving the various product terms and carry combinations.
+
+The circuit diagram can be easily made now:
+
+<p align="center">
+ <img src="">
+ </p>
+
+
  
  
  
