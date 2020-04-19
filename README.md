@@ -576,7 +576,7 @@ Having understood the latches, flip flops are really easy to understand. Let's f
 ### SR Flip Flop
 
 <p align ="center">
-<img src = "https://user-images.githubusercontent.com/58358546/79684045-0b7ba780-824c-11ea-9f47-774f843efcc9.png">
+<img src = "https://user-images.githubusercontent.com/58358546/79684045-0b7ba780-824c-11ea-9f47-774f843efcc9.png" width="290" height="200">
 </p>
 
 If the clock pulse is 0 above then the next part of the flip flop which is simply a NAND SR Latch corresponds to the memory state as both inputs would be 1 to the latch.
@@ -697,7 +697,7 @@ That output is fed back to master FF and on the second rising edge(means slave F
 ### D Flip Flop
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/58358546/79684048-11718880-824c-11ea-8473-9c4c123ea5e1.png" height="200" width="300">
+<img src="https://user-images.githubusercontent.com/58358546/79684048-11718880-824c-11ea-8473-9c4c123ea5e1.png" height="200" width="290">
  </p>
 
 | Q | D | Q* |
