@@ -1,6 +1,35 @@
 ## Content
 - [Introduction](#digitalsystems)
+- [Number Systems](#number)
 - [K-Map](#kmap)
+- [Combinational Circuit](#combinational)
+  - [Half-Adder](#halfadd)
+  - [Full-Adder](#fulladd)
+  - [Binary-Adder](#binaryadd)
+  - [Half-Subtractor](#halfsub)
+  - [Full-Subtractor](#fullsub)
+  - [Binary-Subtractor](#binarysub)
+  - [Binary Adder/Subtractor](#binaryaddsub)
+  - [Binary-Multiplicator](#binarymult)
+  - [Comparator](#comp)
+  - [Decoder](#deco)
+  - [Encoder](#enco)
+-[Sequential Circuit](#seque) 
+  - [SR Latch](#sr)
+    -[NOR Latch](#nor)
+    -[NAND Latch](#nand)
+  - [Flip Flops](#flip)
+  - [J K Flip Flop](#jk)
+  - [D Flip Flop](#d)
+  - [T Flip Flop](#t)
+  - [Register](#regi)
+    - [Shift Register](#shift)
+  - [Counter](#counter)
+    - [Binary Ripple/ Asynchronous Counters](#asyn)
+    - [Decade Counter](#decade)
+    - [State Diagram](#state)
+    - [Synchronous Counter](#syn)
+    - [Modulo-m Counter](#modulo)
 
 <a name="digitalsystems"></a>
   
@@ -18,6 +47,7 @@ The critical advantage of digital systems is their inherent ability to deal with
 <img src="https://cdn.sparkfun.com/assets/c/8/5/b/e/51c495ebce395f1b5a000000.png">
 </p> 
 
+<a name="number"></a>
 
 ## Number Systems
 
@@ -145,7 +175,7 @@ brown pair = A'+B+C'
 
 Final Expression : (C+D'+B').(C'+D'+A).(A'+C+D).(A'+B+C')
 
-
+<a name="combinational"></a>
 
 ## Combinational Circuits
 
@@ -157,6 +187,8 @@ The major steps for designing a combinational circuit include making a truth tab
 Some common examples include:
 
 # Adder and Subtractor
+
+<a name="halfadd"></a>
 
 ## Half-Adder
 
@@ -194,6 +226,8 @@ So, here it is:
  </p>
  
  
+ <a name="fulladd"></a>
+ 
 ## Full-Adder
 
 Full Adder is an arithmetic circuit which adds three inputs and produces two outputs. The first two inputs are(say) A and B and the third input is an input carry(C-in). First, addition of inputs A and B is done followed by adding with input carry.
@@ -229,6 +263,7 @@ Thus, a Full Adder can be constructed using three AND, one OR gate and one XOR g
 <img src="https://user-images.githubusercontent.com/58358546/79631288-e288e300-8175-11ea-8f95-ce52de591e3c.png" height="350" width="450">
  </p>
  
+<a name="binaryadd"></a>
 
 ## Binary-Adder
 
@@ -252,6 +287,7 @@ Figure shows the circuit diagram:
 
 One limitation of a Binary adder is Gate Delay, due to the generation of four Carry-outs and Sums. Thus all outputs will be valid only after four Gate Delays, also known as Carry Propogation problem.
 
+<a name="halfsub"></a>
 
 ## Half-Subtractor
 
@@ -280,6 +316,7 @@ Circuit Diagram:
 <img src="https://user-images.githubusercontent.com/58358546/79633888-eec86c80-8184-11ea-9a56-73eb11dd8252.png" height="330" width="400">
 </p>
 
+<a name="fullsub"></a>
 
 ## Full-Subtractor
 
@@ -313,8 +350,9 @@ Now the circuit diagram can be easily made by
 <p align="center">
 <img src="https://user-images.githubusercontent.com/58358546/79633894-f38d2080-8184-11ea-9e2d-3bf420242601.png" height="350" width="450">
 </p>
- 
 
+<a name="binarysub"></a>
+ 
 ## Binary-Subtractor
 
 Binary Subtractor is a logic circuit that subtracts two binary numbers from each other. It is similar to adding two binary numbers, with the number to be subtracted expressed in 2's complement form.
@@ -333,6 +371,7 @@ Circuit Diagram:
 <img src="https://user-images.githubusercontent.com/58358546/79327186-a06f5f80-7f31-11ea-94de-a3e5c4a93cd0.jpg">
  </p>
 
+<a name="binaryaddsub"></a>
 
 ## Binary Adder/Subtractor
 
@@ -349,6 +388,7 @@ For Subtractor. the resultant expression is {A+(1's complement if B)+Cin} as B+K
 <img src="https://user-images.githubusercontent.com/58358546/79631290-e74d9700-8175-11ea-8a5c-d50331032194.png" height="300" width="600">
  </p>
  
+ <a name="binarymult"></a>
  
  ## Binary Multiplier
 
@@ -385,6 +425,7 @@ The circuit diagram can be easily made now:
  <img src="https://user-images.githubusercontent.com/58358546/79682981-63161500-8244-11ea-87dc-94f634f70108.jpg">
  </p>
  
+ <a name="comp"></a>
  
 ## Comparator
  
@@ -415,6 +456,7 @@ Moving to K-Map for obtaining simplified expressions:
  <img src="https://user-images.githubusercontent.com/58358546/79684609-7929d280-8250-11ea-8916-66a415c7ba8a.png">
  </p>
 
+<a name="deco"></a>
 
 ## Decoder
 
@@ -452,6 +494,7 @@ The truth table is as follows:
 Similarly there are 2x4 and 4x16 decoders also.
 
 
+<a name="enco"></a>
 
 ## Encoder
 
@@ -485,6 +528,7 @@ Since, A0 = Y1 + Y3 + Y5 + Y7    ,   A1 = Y2 + Y3 + Y6 + Y7   ,  A2 = Y4 + Y5 + 
 However ther's one **Anomally** with an encoder which is if all the ouptut lines are 0 , it could be if all the inputs are 0 or the least significant input is 0.
 
 
+<a name="seque"></a>
 
 ## Sequential Circuits
 
@@ -502,9 +546,13 @@ These memory elements which are capable of storing one bit of information are kn
 Before coming to the flip flops, let's know about **latches** which are the most basic and primitive form of flip flops and used as memory elements.
 Certain types of latches are:
 
-  **SR Latch**
+<a name="sr"></a>
+
+## SR Latch
   
-It is the Set Reset Latch and there are two forms of it using the NOR gate and the NAND gate.  
+It is the Set Reset Latch and there are two forms of it using the NOR gate and the NAND gate. 
+
+<a name="nor"></a>
 
 1. **NOR Latch**
 
@@ -557,6 +605,7 @@ The truth table of NOR Latch is:
 | 1 | 0 | 1              | Set       |
 | 1 | 1 | ?              | Forbidden |
 
+<a name="nand"></a>
 
 2. **NAND Latch**
 
@@ -598,6 +647,8 @@ The truth table of NAND Latch is:
 | 1 | 0 | 0              | Reset     |
 | 0 | 1 | 1              | Set       |
 | 0 | 0 | ?              | Forbidden |
+
+<a name="flip"></a>
 
 ## Flip Flops
 
@@ -667,6 +718,7 @@ There is also one excitation table in which we have the outputs(Q(n) & Q(n+1)) w
 |   1  |    0   | 0 | 1 |
 |   1  |    1   | X | 0 |             **X = DONT'T CARE (can be 0 or 1)**
 
+<a name="jk"></a>
 
 ## J K Flip Flop:
 
@@ -732,6 +784,7 @@ That output is fed back to master FF and on the second rising edge(means slave F
 
 **This makes the Master-Slave J-K flip flop a Synchronous device as it only passes data with the timing of the clock signal**
 
+<a name="d"></a>
 
 ### D Flip Flop
 
@@ -746,6 +799,7 @@ That output is fed back to master FF and on the second rising edge(means slave F
 | 1 | 0 | 0  |
 | 1 | 1 | 1  |
 
+<a name="t"></a>
 
 ### T Flip Flop
 
@@ -760,6 +814,7 @@ That output is fed back to master FF and on the second rising edge(means slave F
 | 1 | 0 | 1  |
 | 1 | 1 | 0  |
 
+<a name="regi"></a>
 
 ## Registers
 
@@ -798,6 +853,7 @@ There are two types of Registers based on application, namely:
  
 For simplicity, we will elaborate only Shift Registers. 
 
+<a name="shift"></a>
 
 ## Shift Register
 
@@ -843,6 +899,7 @@ Timing Diagram
 <image src="https://user-images.githubusercontent.com/58358546/79615120-9e6af380-811f-11ea-97dc-bcb72c5bcd70.jpg" width="500" height ="400">
 </p>
 
+<a name="counter"></a>
 
 ## Counters
 
@@ -867,6 +924,8 @@ Moving to the circuit design, counters are groups of flip-flops and as we know, 
  - A counter following binary number sequence is called Binary Counter. We'll be using this term hereby.
  - An n bit binary counter consists of n flip-flops and can count in binary from 0 to (2<sup>n</sup> – 1).
  
+<a name="asyn"></a>
+
 ## Binary Ripple/ Asynchronous Counters
 
 
@@ -940,6 +999,7 @@ As a simple modification of the UP counter. 4 bit DOWN counter will count number
 
 The block diagram of 4-bit Asynchronous binary down counter is similar to the block diagram of 4-bit Asynchronous binary up counter. But, the only difference is that instead of connecting the normal outputs of one stage flip-flop as clock signal for next stage flip-flop, connect the complemented outputs of one stage flip-flop as clock signal for next stage flip-flop. 
 
+<a name="decade"></a>
 
 ## BCD Ripple Counter/ Decade Counter
 
@@ -979,6 +1039,7 @@ Thus, the pulse after the counter is at count = 9, effectively results in the co
 |  9|  1 |  0 |  0 |  1 |
 | 10|  0 |  0 |  0 |  0 |
 
+<a name="state"></a>
 
 ## State Diagram of a Counter
 
@@ -1002,6 +1063,7 @@ Similarly, following is the state diagram of a BCD up Counter:
  width="500" height="300">
  </p>
 
+<a name="syn"></a>
 
 ## Synchronous Counters
 
@@ -1081,7 +1143,8 @@ So, our circuit excitation table looks like this:
  <img src="https://user-images.githubusercontent.com/58358546/79606909-f13caf00-810f-11ea-9133-1842015c8d8c.jpg">
  </p>
  
- 
+<a name="modulo"></a> 
+
 ## Modulo-m counters
 
 - 2-bit up/down ripple counter is MOD-4 or modulus 4 counter.
