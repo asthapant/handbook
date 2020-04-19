@@ -1,5 +1,40 @@
-# E-club-handbook
-Digital electronics part of E club handbook
+# Digital Systems
+
+Digital Systems are designed to store, process, and communicate information in digital form. They are found in a wide range of applications, including process control, communication systems, digital instruments, and consumer products.These systems store data in a discrete way.
+
+The simplest form of digital system is binary, with exactly two distinct values for inputs and outputs. Binary digital sys-tems form the basis of just about all hardware systems in existence today.
+
+### Advantages of Digital System
+
+The critical advantage of digital systems is their inherent ability to deal with electrical signals that have been degraded by transmission through circuits. Because of the discrete nature of the outputs, a slight variation in an input is translated into one of the correct output values. In analog circuits, a slight error at the input generates an error at the output. If analog circuits are wired together in series, the output of one feeding the input of the next, each stage adds its own small error. The sum of the errors over several stages becomes overwhelming. Digital components are considerably more accurate and reliable.
+
+<p align="center">
+<img src="https://cdn.sparkfun.com/assets/c/8/5/b/e/51c495ebce395f1b5a000000.png">
+</p> 
+
+
+## Number Systems
+
+
+In digital electronics, the number system is used for representing the information. The number system has different bases and the most common of them are the decimal, binary, octal, and hexadecimal. The base or radix of the number system is the total number of the digit used in the number system. Suppose if the number system representing the digit from 0 to 9 then the base of the system is the 10. Types of Number System:
+
+- Decimal Number System : The number system is having digit 0, 1, 2, 3, 4, 5, 6, 7, 8, 9; this number system is known as a     decimal number system because total ten digits are involved.The base of the decimal number system is 10.
+
+- Binary Number System : The modern computers do not process decimal number; they work with another number system known as a binary number system which uses only two digits 0 and1.The base of binary number system is 2 because it has only two digit 0 and 1.The digital electronic equipments are works on the binary number system and hence the decimal number system is converted into binary system.
+
+- Octal Number System : The base of a number system is equal to the number of
+digits used, i.e., for decimal number system the base is ten while for the binary
+system the base is two. The octal system has the base of eight as it uses eight digits
+0, 1, 2, 3, 4, 5, 6, 7.
+
+- Hexadecimal Number System : These numbers are used extensively in micropro-
+cessor work.The hexadecimal number system has a base of 16, and hence it con-
+sists of the following sixteen number of digits.
+
+  0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F.
+
+  The size of the hexadecimal is much shorter than the binary number which makes
+  them easy to write and remember.
 
 # K-Map
 The main use of K maps is to simplify or reduce our circuit or to reduce the POS or SOP expression that we have made using logic gates(the ones previously told) and with our input signals thus arriving at the most optimal logic design 
