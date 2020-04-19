@@ -309,9 +309,19 @@ Now the circuit diagram can be easily made by
 
 ## Binary-Subtractor
 
-Binary Subtractor is a logic circuit that subtracts two binary numbers from each other. It is similar to adding two binary numbers, with the number to be subtracted expressed in 2's complement form. Reminder!(2's complement involves inverting all the bits and adding 1 to the Least Significant Bit(LSB)).
+Binary Subtractor is a logic circuit that subtracts two binary numbers from each other. It is similar to adding two binary numbers, with the number to be subtracted expressed in 2's complement form.
 
- <p align="center">
+**Reminder**: 2's complement involves inverting all the bits and adding 1 to the Least Significant Bit(LSB).
+
+So, making the cicuit diagram is fairly simple.
+- Let say, we need to subtract two 4-bit numbers, so in order to do this, we will use a 4-bit binary adder( which consists of 4 full adders) and 4 number of inverters (NOT Gates).
+- The process of subtraction thus becomes an addition as we can use two’s complement notation on all the bits in the subtrahend( number to be subtracted). 
+- So, we first use NOT gates to generate 1's complement and then set the carry input(C<sub>0</sub>) of the least significant bit to a logic 1 for adding 1 to LSB.
+- Thus, S<sub>3</sub>S<sub>2</sub>S<sub>1</sub>S<sub>0</sub> is the resultant difference.
+
+Circuit Diagram:
+
+<p align="center">
 <img src="https://user-images.githubusercontent.com/58358546/79327186-a06f5f80-7f31-11ea-94de-a3e5c4a93cd0.jpg">
  </p>
 
@@ -321,12 +331,51 @@ Binary Subtractor is a logic circuit that subtracts two binary numbers from each
 Binary Adder-Subtractor does both addition and subtraction of binary numbers in one circuit itself. The circuit consists of 4 full adders for operations on 4-bit numbers. 
 There is a control signal(say K) that holds a binary value of either 0(adder) or 1(subtactor) which determines that the operation being carried out is addition or subtraction.
 
-One of the binary numbers(say B) is the input on the XOR gate along with the control signal.(Such that:1+B=B', 0+B=B) For Adder, the resultant expression becomes {A+B+Cin}as B+K=B since K is equal to 0. For Subtractor. the resultant expression is {A+(1's complement if B)+Cin} as B+K=B' since K is equal to 1.
+One of the binary numbers(say B) is the input on the XOR gate along with the control signal.(Such that:1+B=B', 0+B=B)
+
+For Adder, the resultant expression becomes {A+B+Cin}as B+K=B since K is equal to 0. 
+
+For Subtractor. the resultant expression is {A+(1's complement if B)+Cin} as B+K=B' since K is equal to 1.
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/58358546/79631290-e74d9700-8175-11ea-8a5c-d50331032194.png" height="300" width="600">
  </p>
+ 
+ 
+ ## Binary Multiplier
 
+
+A Binary multiplier is used for multiplying two binary numbers by also using full adders and half adders.
+
+Let us first learn the multiplication of 2-bit binary numbers:
+
+Assuming A = A<sub>1</sub>A<sub>0</sub> and B = B<sub>1</sub>B<sub>0</sub> , the various bits of the final product term C can be written as:
+
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/58358546/79682979-5db8ca80-8244-11ea-9045-f189a11e1002.jpg">
+ </p>
+ 
+ 
+- C(0) = A<sub>0</sub>B<sub>0</sub>
+- C(1) = A<sub>1</sub>B<sub>0</sub> + B<sub>1</sub>A<sub>0</sub>
+- C(2) = A<sub>1</sub>B<sub>1</sub> + c<sub>1</sub> where c<sub>1</sub> is the carry generated during the addition for the C(1) term.
+- C(3) = c<sub>2</sub> where c<sub>2</sub> is the carry generated during the addition for the C(2) term.
+
+Moving ot the cicuit diagram:
+
+- The multiplication of two bits such as A<sub>0</sub> and B<sub>0</sub> produces a 1 if both bits are 1; otherwise, it produces 0. This is identical to an AND operation and can be implemented with an AND gate.
+- Thus the first partial products A<sub>0</sub>B<sub>0</sub> and A<sub>0</sub>B<sub>1</sub> are formed by means of two AND gates.
+- The second partial product is formed by multiplying A<sub>1</sub> by B<sub>1</sub> and B<sub>0</sub> and is shifted one position to the left.
+- The above two partial products are added with two half-adder(HA) circuits. Usually there are more bits in the partial products and it will be necessary to use full-adders to produce the sum.
+- Note that the least significant bit of the product does not have to go through an adder since it is formed by the output of the first AND gate.
+
+Thus, for the multiplication, AND gates are required to form the various product terms like A<sub>0</sub>B<sub>0</sub> etc. and then half adders are required to calculate the sums involving the various product terms and carry combinations.
+
+The circuit diagram can be easily made now:
+
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/58358546/79682981-63161500-8244-11ea-87dc-94f634f70108.jpg">
+ </p>
 
 
 ## Decoder
