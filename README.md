@@ -697,7 +697,7 @@ That output is fed back to master FF and on the second rising edge(means slave F
 ### D Flip Flop
 
 <p align="center">
-<img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/gq/2017/01/D-logic-diag-300x123.png" height="200">
+<img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/gq/2017/01/D-logic-diag-300x123.png" height="200" width="300">
 </p>
 
 | Q | D | Q* |
