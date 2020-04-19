@@ -27,7 +27,7 @@
   - [Counter](#counter)
     - [Binary Ripple/ Asynchronous Counters](#asyn)
     - [Decade Counter](#decade)
-    - [State Diagram](#state)
+    - [State Diagrams](#state)
     - [Synchronous Counter](#syn)
     - [Modulo-m Counter](#modulo)
 
