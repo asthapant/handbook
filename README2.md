@@ -311,6 +311,8 @@ That output is fed back to master FF and on the second rising edge(means slave F
 | 1 | 0 | 1  |
 | 1 | 1 | 0  |
 
+|
+
 <a name="regi"></a>
 
 ## Registers
@@ -350,6 +352,7 @@ There are two types of Registers based on application, namely:
  
 For simplicity, we will elaborate only Shift Registers. 
 
+<a name="shift"></a>
 
 ## Shift Register
 
@@ -396,6 +399,7 @@ Timing Diagram
 </p>
 
 <a name="counter"></a>
+
 ## Counters
 
 
@@ -419,6 +423,8 @@ Moving to the circuit design, counters are groups of flip-flops and as we know, 
  - A counter following binary number sequence is called Binary Counter. We'll be using this term hereby.
  - An n bit binary counter consists of n flip-flops and can count in binary from 0 to (2<sup>n</sup> – 1).
  
+<a name="asyn"></a>
+
 ## Binary Ripple/ Asynchronous Counters
 
 
@@ -492,6 +498,7 @@ As a simple modification of the UP counter. 4 bit DOWN counter will count number
 
 The block diagram of 4-bit Asynchronous binary down counter is similar to the block diagram of 4-bit Asynchronous binary up counter. But, the only difference is that instead of connecting the normal outputs of one stage flip-flop as clock signal for next stage flip-flop, connect the complemented outputs of one stage flip-flop as clock signal for next stage flip-flop. 
 
+<a name="decade"></a>
 
 ## BCD Ripple Counter/ Decade Counter
 
@@ -531,6 +538,7 @@ Thus, the pulse after the counter is at count = 9, effectively results in the co
 |  9|  1 |  0 |  0 |  1 |
 | 10|  0 |  0 |  0 |  0 |
 
+<a name="state"></a>
 
 ## State Diagram of a Counter
 
@@ -554,6 +562,7 @@ Similarly, following is the state diagram of a BCD up Counter:
  width="500" height="300">
  </p>
 
+<a name="syn"></a>
 
 ## Synchronous Counters
 
@@ -633,7 +642,8 @@ So, our circuit excitation table looks like this:
  <img src="https://user-images.githubusercontent.com/58358546/79606909-f13caf00-810f-11ea-9133-1842015c8d8c.jpg">
  </p>
  
- 
+<a name="modulo"></a> 
+
 ## Modulo-m counters
 
 - 2-bit up/down ripple counter is MOD-4 or modulus 4 counter.
@@ -644,3 +654,4 @@ Now, an important point to be discussed here is, making a counter count to a par
 made a Modulo-p counter, with p < m. Example: A Modulo-8 counter can be made to count only from 0 to 5, and thus, it becomesa Modulo-6 counter.
 
 This is done using PRESET and CLR input, and with the use of NAND gate. We've already discussed something similar in a decade counter.
+
