@@ -25,8 +25,6 @@ The major steps for designing a combinational circuit include making a truth tab
 
 Some common examples include:
 
-# Adder and Subtractor
-
 <a name="halfadd"></a>
 
 ## Half-Adder
