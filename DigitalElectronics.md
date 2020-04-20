@@ -4,7 +4,7 @@
 - [Introduction](#digitalsystems)
   - [Number Systems](#number)
   - [K-Map](#kmap)
-    - [Filling and solving the K-map](#fillsolve)
+   - [Filling and solving the K-map](#fillsolve)
 - [Combinational Circuit](https://github.com/asthapant/handbook/blob/master/Combinational.md)
 - [Sequential Circuit](https://github.com/asthapant/handbook/edit/master/Sequential.md)
 
