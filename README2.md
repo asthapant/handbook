@@ -1,5 +1,30 @@
 ## Sequential Circuits
 
+##Contents
+
+-[Introduction](#introduction)
+- [SR Latch](#sr)
+    - [NOR Latch](#nor)
+    - [NAND Latch](#nand)
+ - [Flip Flops](#flip)
+  - [J K Flip Flop](#jk)
+  - [D Flip Flop](#d)
+  - [T Flip Flop](#t)
+ - [Register](#regi)
+    - [Shift Register](#shift)
+ - [Counter](#counter)
+    - [Binary Ripple/ Asynchronous Counters](#asyn)
+    - [Decade Counter](#decade)
+    - [State Diagrams](#state)
+    - [Synchronous Counter](#syn)
+    - [Modulo-m Counter](#modulo)
+
+
+
+<a name="introduction"></a>
+
+## Introduction
+
 Sequential circuits are circuits in which the present output depend on the present input as well as the past output/outputs.
 Basically, there's a memory element which stores the output and provides that as a feedback or another set of input to its own circuit to generate a new output.The basic difference between the sequential and combinational circuits are these memory blocks.
 
