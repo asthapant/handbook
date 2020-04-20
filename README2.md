@@ -7,7 +7,8 @@
     - [NOR Latch](#nor)
     - [NAND Latch](#nand)
  - [Flip Flops](#flip)
-   - [J K Flip Flop](#jk)
+   - [SR Flip Flop](#srflip)
+   - [JK Flip Flop](#jk)
    - [D Flip Flop](#d)
    - [T Flip Flop](#t)
  - [Register](#regi)
@@ -156,6 +157,8 @@ A clock is necessary because otherwise the inputs can change on their own and th
 
 Having understood the latches, flip flops are really easy to understand. Let's first go with the SR flip flop.
 
+<a name="srflip"></a>
+
 ### SR Flip Flop
 
 <p align ="center">
@@ -213,7 +216,7 @@ There is also one excitation table in which we have the outputs(Q(n) & Q(n+1)) w
 
 <a name="jk"></a>
 
-## J K Flip Flop:
+## JK Flip Flop:
 
 Due to the shortcoming of the SR flip flop, JK flip flop in which for every set of input there is an output. It is completely similar to the SR flip flop just having an output value for the forbidden states also.
 
@@ -641,160 +644,3 @@ Now, an important point to be discussed here is, making a counter count to a par
 made a Modulo-p counter, with p < m. Example: A Modulo-8 counter can be made to count only from 0 to 5, and thus, it becomesa Modulo-6 counter.
 
 This is done using PRESET and CLR input, and with the use of NAND gate. We've already discussed something similar in a decade counter.
-
-
-## Binary Multiplier
-
-
-A Binary multiplier is used for multiplying two binary numbers by also using full adders and half adders.
-
-Let us first learn the multiplication of 2-bit binary numbers:
-
-Assuming A = A<sub>1</sub>A<sub>0</sub> and B = B<sub>1</sub>B<sub>0</sub> , the various bits of the final product term C can be written as:
-
-<p align="center">
- <img src="https://user-images.githubusercontent.com/58358546/79682979-5db8ca80-8244-11ea-9045-f189a11e1002.jpg">
- </p>
- 
- 
-- C(0) = A<sub>0</sub>B<sub>0</sub>
-- C(1) = A<sub>1</sub>B<sub>0</sub> + B<sub>1</sub>A<sub>0</sub>
-- C(2) = A<sub>1</sub>B<sub>1</sub> + c<sub>1</sub> where c<sub>1</sub> is the carry generated during the addition for the C(1) term.
-- C(3) = c<sub>2</sub> where c<sub>2</sub> is the carry generated during the addition for the C(2) term.
-
-Moving ot the cicuit diagram:
-
-- The multiplication of two bits such as A<sub>0</sub> and B<sub>0</sub> produces a 1 if both bits are 1; otherwise, it produces 0. This is identical to an AND operation and can be implemented with an AND gate.
-- Thus the first partial products A<sub>0</sub>B<sub>0</sub> and A<sub>0</sub>B<sub>1</sub> are formed by means of two AND gates.
-- The second partial product is formed by multiplying A<sub>1</sub> by B<sub>1</sub> and B<sub>0</sub> and is shifted one position to the left.
-- The above two partial products are added with two half-adder(HA) circuits. Usually there are more bits in the partial products and it will be necessary to use full-adders to produce the sum.
-- Note that the least significant bit of the product does not have to go through an adder since it is formed by the output of the first AND gate.
-
-Thus, for the multiplication, AND gates are required to form the various product terms like A<sub>0</sub>B<sub>0</sub> etc. and then half adders are required to calculate the sums involving the various product terms and carry combinations.
-
-The circuit diagram can be easily made now:
-
-<p align="center">
- <img src="https://user-images.githubusercontent.com/58358546/79682981-63161500-8244-11ea-87dc-94f634f70108.jpg">
- </p>
- 
- 
- ## Comparators
- 
-A magnitude comparator is a combinational circuit that compares two digital or binary numbers in order to find out whether one binary number is equal, less than or greater than the other binary number. 
-
-We logically design a circuit for which we will have two inputs one for A and other for B and have three output terminals, one for A > B condition, one for A = B condition and one for A < B condition.
-
-Here for simplicity, we will elaborate a 1-bit comparator which compares two numbers of 1 bit each.
-
-Lets look at the truth table for such a comparator:
-
-| A | B | A<B | A=B | A>B |
-|---|---|-----|-----|-----|
-| 0 | 0 | 0   | 1   | 0   |
-| 0 | 1 | 1   | 0   | 0   |
-| 1 | 0 | 0   | 0   | 1   |
-| 1 | 1 | 0   | 1   | 0   |
-
-Moving to K-Map for obtaining simplified expressions:
-
-<p align="center">
- <img src="">
- </p>
- 
- By using these Boolean expressions, we can implement a logic circuit for this comparator as given below:
- 
- <p align="center">
- <img src="">
- </p>
-
-
- 
- 
- 
-
- 
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
- 
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
