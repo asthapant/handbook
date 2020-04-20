@@ -14,7 +14,7 @@
   - [Comparator](#comp)
   - [Decoder](#deco)
   - [Encoder](#enco)
-- [Sequential Circuit](#seque) 
+- [Sequential Circuit](https://github.com/asthapant/handbook/blob/master/README2.md) 
   - [SR Latch](#sr)
     - [NOR Latch](#nor)
     - [NAND Latch](#nand)
@@ -528,7 +528,6 @@ Since, A0 = Y1 + Y3 + Y5 + Y7    ,   A1 = Y2 + Y3 + Y6 + Y7   ,  A2 = Y4 + Y5 + 
 However ther's one **Anomally** with an encoder which is if all the ouptut lines are 0 , it could be if all the inputs are 0 or the least significant input is 0.
 
 
-<a name="seque"></a>
 
 ## Sequential Circuits
 
