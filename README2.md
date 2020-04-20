@@ -11,9 +11,9 @@
    - [JK Flip Flop](#jk)
    - [D Flip Flop](#d)
    - [T Flip Flop](#t)
- - [Register](#regi)
+ - [Registers](#regi)
     - [Shift Register](#shift)
- - [Counter](#counter)
+ - [Counters](#counter)
     - [Binary Ripple/ Asynchronous Counters](#asyn)
     - [Decade Counter](#decade)
     - [State Diagrams](#state)
@@ -395,7 +395,7 @@ Timing Diagram
 <image src="https://user-images.githubusercontent.com/58358546/79615120-9e6af380-811f-11ea-97dc-bcb72c5bcd70.jpg" width="500" height ="400">
 </p>
 
-
+<a name="counter"></a>
 ## Counters
 
 
