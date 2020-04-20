@@ -1,8 +1,8 @@
 ## Sequential Circuits
 
-##Contents
+## Contents
 
--[Introduction](#introduction)
+- [Introduction](#introduction)
 - [SR Latch](#sr)
     - [NOR Latch](#nor)
     - [NAND Latch](#nand)
