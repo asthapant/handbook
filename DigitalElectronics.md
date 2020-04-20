@@ -102,7 +102,7 @@ Similarly the green pair will be: A.B (the value of C changes and A:1, B:1).
 
 Hence the reduced expression : A'.C + A.B
 
-#### 4 Variable Karnaugh Map:
+#### 4 variable Karnaugh Map:
 
 F(P,Q,R,S)=∑(0,2,5,7,8,10,13,15)
 
@@ -120,35 +120,41 @@ Final expression: Q'.S' + Q.S
 
 ##### One more example-
 
-F(A,B,C,D):∑(0,1,2,4,5,6,8,9,10,12,13)
+F(W,X,Y,Z):∑(4,5,7,13,14,15)
 
 <p align="center">
-<img src="https://www.electricaltechnology.org/wp-content/uploads/2018/04/4-variable-k-map-Example.png" height="280" width="280">
+<img src="https://www.dyclassroom.com/image/topic/boolean-algebra/sop-reduction-using-k-map/10.png" width="380" height="300">
 </p>
 
 Try to this on your own.
 
-Final expression: A' + C'.B' + D'.B'
+Final expression: (W'.X.Y') + (W.X.Y) + (X.Z)
 
 
 ## POS Expression
 
 For the POS expression all the things are same as the SOP expression but instead of 1's, you have to make the groups of 0's and during wriing the expression make sure that every variable's value is 0 , instead of 1 and if not take the complement of that variable. 
 
-### 4 Variable POS Expression:
+### 4 variable POS expression:
 
-F(A,B,C,D) = π(3,5,7,8,10,11,12,13)
+F(W,X,Y,Z) = π(1,3,4,6,9,11,12,14)
 
 <p align = "center">
-<img src = "https://media.geeksforgeeks.org/wp-content/uploads/K-Map-Karnaugh-Map-3.png", width = "300" height = "300">
+<img src = "https://www.dyclassroom.com/image/topic/boolean-algebra/pos-reduction-using-k-map/08.png", width = "380" height = "300">
 </p> 
 
-green pair = C+D'+B'
+Horizontal quad : X + Z'
 
-red pair = C'+D'+A
+Vertical quad : X' + Z
 
-blue pair = A'+C+D
+Final Expression : (X+Z').(X'+Z)
 
-brown pair = A'+B+C'
+##### Try one on your own:
 
-Final Expression : (C+D'+B').(C'+D'+A).(A'+C+D).(A'+B+C')
+F(W,X,Y,Z) = π(0,1,2,4,5,7,10,15)
+
+<p align = "center">
+<img src = "https://www.dyclassroom.com/image/topic/boolean-algebra/pos-reduction-using-k-map/14.png" height="300" width="380">
+</p>  
+
+Final Expression : (W+Y).(X'+Y'+Z').(X+Y'+Z)
