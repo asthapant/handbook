@@ -10,7 +10,7 @@
   - [Full-Subtractor](#fullsub)
   - [Binary-Subtractor](#binarysub)
   - [Binary Adder/Subtractor](#binaryaddsub)
-  - [Binary-Multiplicator](#binarymult)
+  - [Binary-Multiplier](#binarymult)
   - [Comparator](#comp)
   - [Decoder](#deco)
   - [Encoder](#enco)
