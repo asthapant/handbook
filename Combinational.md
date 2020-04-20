@@ -1,17 +1,22 @@
+## Combinational Circuits
+
 ## Contents
 
-
-
-
-
-
-
-
-
-
-
-
-## Combinational Circuits
+- [Introduction](#combinational)
+  - [Half-Adder](#halfadd)
+  - [Full-Adder](#fulladd)
+  - [Binary-Adder](#binaryadd)
+  - [Half-Subtractor](#halfsub)
+  - [Full-Subtractor](#fullsub)
+  - [Binary-Subtractor](#binarysub)
+  - [Binary Adder/Subtractor](#binaryaddsub)
+  - [Binary-Multiplicator](#binarymult)
+  - [Comparator](#comp)
+  - [Decoder](#deco)
+  - [Encoder](#enco)
+  
+  
+## Introduction
 
 Combinational Circuit consists of input variables(i/p), logic gates and output variables(o/p). They are a type of **time independent circuits** whose output depends upon the present combination of input variables. In other terms, each output is a pure function of input variables.
 The logic basically performs Boolean Algebra on inputs, where each output is expressed in terms of a combination of (say) n input variables or a Boolean function. 
