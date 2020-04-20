@@ -311,8 +311,6 @@ That output is fed back to master FF and on the second rising edge(means slave F
 | 1 | 0 | 1  |
 | 1 | 1 | 0  |
 
-|
-
 <a name="regi"></a>
 
 ## Registers
